@@ -21,7 +21,7 @@
   # vconsole
   console = {
     font = "LatGrkCyr-12x22";
-    keyMap = "ru";
+    useXkbConfig = true; # setup as xkb
   };
 
   networking.hostName = "userok"; # Define your hostname.
