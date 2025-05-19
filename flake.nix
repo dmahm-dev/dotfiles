@@ -26,7 +26,7 @@
       specialArgs = { inherit inputs unstable;};
       modules = [
         ./hosts/main/configuration.nix
-        ./modules/hardware-optimisations.nix
+        ./modules/default.nix
 
         /*nixos-hardware.nixosModules.common.cpu.intel.tiger-lake
         nixos-hardware.nixosModules.common.pc.ssd*/
