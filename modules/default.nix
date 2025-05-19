@@ -1,9 +1,10 @@
 {config, lib, ...}:
 
 {
-  imports = [
-    ./hardware-optimisations.nix
-    ./programs/bash.nix
-    ./environmentVars.nix
-  ];
+	imports = [
+		./hardware-optimisations.nix
+		./environmentVars.nix
+		./programs/bash.nix
+		./programs/editors.nix
+	];
 }
