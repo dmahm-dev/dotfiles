@@ -1,0 +1,4 @@
+setup firewalld
+ban iptable
+install fail2ban
+switch to uki

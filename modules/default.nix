@@ -2,7 +2,8 @@
 
 {
 	imports = [
-		./hardware-optimisations.nix
+		./hardware/optimisations.nix
+		./hardware/modprobe.nix
 		./environmentVars.nix
 		./programs/bash.nix
 		./programs/editors.nix
