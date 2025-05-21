@@ -8,5 +8,6 @@
 		./programs/bash.nix
 		./programs/editors.nix
 		./programs/git.nix
+		./programs/network.nix
 	];
 }

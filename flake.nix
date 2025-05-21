@@ -24,7 +24,7 @@
 		nixosConfigurations.userok = inputs.nixpkgs.lib.nixosSystem {
 			specialArgs = { inherit inputs unstable;};
 			modules = [
-				./hosts/main/configuration.nix
+				./hosts/main.nix
 				./modules/default.nix
 
 				/*nixos-hardware.nixosModules.common.cpu.intel.tiger-lake
