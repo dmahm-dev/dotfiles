@@ -18,7 +18,7 @@
 	};
 	services.resolved = {
 		enable = true;
-		dnssec = "allow-downgrade";
+		dnssec = "true";
 		dnsovertls = "opportunistic";
 		extraConfig = "MulticastDNS=no";
 	};
