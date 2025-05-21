@@ -25,10 +25,6 @@
 	};
 
 	networking.hostName = "userok"; # Define your hostname.
-	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-	# Enable networking
-	networking.networkmanager.enable = true;
 
 	# Set your time zone.
 	time.timeZone = "Europe/Moscow";
@@ -104,9 +100,6 @@
 	# Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
 	#systemd.services."getty@tty1".enable = false;
 	#systemd.services."autovt@tty1".enable = false;
-
-	# Install firefox.
-	#programs.firefox.enable = true;
 
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
