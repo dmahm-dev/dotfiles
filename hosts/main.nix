@@ -88,7 +88,7 @@
 	users.users.user = {
 		isNormalUser = true;
 		description = "user";
-		extraGroups = [ "networkmanager" "wheel" ];
+		extraGroups = [ "networkmanager" "wheel" "network" "video" "input" "storage"];
 		packages = with pkgs; [
 		#  thunderbird
 		];
