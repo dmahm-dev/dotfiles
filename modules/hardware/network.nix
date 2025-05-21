@@ -16,5 +16,10 @@
 		enable = true;
 		dns = "systemd-resolved";
 	};
-	services.resolved.enable = true;
+	services.resolved = {
+		enable = true;
+		dnssec = "allow-downgrade";
+		dnsovertls = "opportunistic";
+		extraConfig = "MulticastDNS=no";
+	};
 }
