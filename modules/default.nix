@@ -6,6 +6,7 @@
 		./hardware/modprobe.nix
 		./hardware/bluetooth.nix
 		./hardware/network.nix
+		./hardware/udisks.nix
 		./environmentVars.nix
 		./programs/bash.nix
 		./programs/editors.nix
