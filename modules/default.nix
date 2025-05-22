@@ -8,6 +8,7 @@
 		./hardware/bluetooth.nix
 		./hardware/network.nix
 		./hardware/udisks.nix
+		./hardware/thermal-control.nix
 		./services/journald.nix
 		./programs/bash.nix
 		./programs/editors.nix

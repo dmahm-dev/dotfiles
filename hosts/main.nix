@@ -25,6 +25,8 @@
 	};
 
 	networking.hostName = "userok"; # Define your hostname.
+	hardware.enableAllFirmware = true; # Ignore license
+	nixpkgs.config.allowUnfree = true; # Fix for enableAllFirmware
 
 	# Set your time zone.
 	time.timeZone = "Europe/Moscow";
