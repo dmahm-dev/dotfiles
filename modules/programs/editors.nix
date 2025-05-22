@@ -2,8 +2,6 @@
 
 {
 	programs.nano = {
-		nanorc = ''
-			set tabsize 2
-		'';
+		nanorc = "set tabsize 2";
 	};
 }
