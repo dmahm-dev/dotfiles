@@ -22,4 +22,9 @@
 		dnsovertls = "opportunistic";
 		extraConfig = "MulticastDNS=no";
 	};
+
+	boot.kernel.sysctl = {
+		"net.ipv4.tcp_fastopen" = 3;
+		"net.ipv4.tcp_slow_start_after_idle" = 0;
+	};
 }

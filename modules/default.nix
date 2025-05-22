@@ -10,6 +10,7 @@
 		./hardware/udisks.nix
 		./hardware/thermal-control.nix
 		./services/journald.nix
+		./services/sysctl.nix
 		./programs/bash.nix
 		./programs/editors.nix
 		./programs/git.nix
