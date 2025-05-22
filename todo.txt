@@ -8,3 +8,6 @@ disable ipv6 when turn on vpn
 setup secure boot
 setup xdg portal
 setup xdg user-dirs
+setup cups-pdf output folder
+disable login message (in ~ directory touch .hushlogin)
+check suspend and hibernation
