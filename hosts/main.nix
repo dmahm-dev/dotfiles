@@ -28,6 +28,17 @@
 	hardware.enableAllFirmware = true; # Ignore license
 	nixpkgs.config.allowUnfree = true; # Fix for enableAllFirmware
 
+	# Setup cachix
+	nix.settings = {
+		substituters = [
+			"https://cache.nixos.org/"
+			"https://nix-community.cachix.org"
+		];
+		trusted-public-keys = [
+			"nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+		];
+	};
+
 	# Set your time zone.
 	time.timeZone = "Europe/Moscow";
 
@@ -106,8 +117,7 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-	#  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	#  wget
+		cachix
 	];
 
 	# Some programs need SUID wrappers, can be configured further or are

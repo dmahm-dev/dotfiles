@@ -15,3 +15,7 @@ check vulkan on intel and nvidia
 check vdpau on intel and nvidia
 check NVENC on nvidia
 check vaapi on intel
+setup prime in optimisations.nix
+setup CUDA
+setup cachix for cuda and other things
+

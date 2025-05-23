@@ -23,17 +23,68 @@
 			intel-vaapi-driver
 			intel-media-driver
 			libvdpau-va-gl
+			intel-ocl
 		];
 	};
 	
 	hardware.intel-gpu-tools.enable = true;
 	environment.systemPackages = with pkgs; [
 		intel-gpu-tools
+		mesa-demos
 		vdpauinfo
 		libva-utils
 		vulkan-tools
+		nvtopPackages.intel
+		#nvidia
+		nvidia-vaapi-driver
+		nvtopPackages.nvidia
+		cudaPackages.cuda_nvcc
 	];
 
 	# NVIDIA
-	
+	hardware.nvidia = {
+		#enabled = true; #since 25.05
+		modesetting.enable = true;
+		nvidiaSettings = true;
+		open = false; # d3cold is not working
+		package = config.boot.kernelPackages.nvidiaPackages.stable;
+		#prime.sync.enable = true;
+		#prime.nvidiaBusId = "PCI:1@0:0.0";
+		#prime.intelBusId = "PCI:0@0:2:0";
+		nvidiaPersistenced = true; # turn on hibernation
+	};
+
+	boot.extraModprobeConfig = 
+		lib.strings.replaceStrings ["\t"] [""] ''
+		# Enable nvidia for wayland
+		options nvidia_drm modeset=1 fbdev=1
+		# Improve nvidia performance
+		options nvidia NVreg_UsePageAttributeTable=1
+		# Save all video memory to swap on hibernate
+		options nvidia NVreg_PreserveVideoMemoryAllocations=1
+		# Disable external GPU when unneded
+		options nvidia NVreg_DynamicPowerManagement=0x02
+		# Disable NVIDIA GSP due to unworking D3 state
+		options nvidia NVreg_EnableGpuFirmware=0
+	'';
+
+	services.udev.extraRules = 
+		lib.strings.replaceStrings ["\t"] [""] ''
+		# Enable runtime PM for NVIDIA VGA/3D 
+		# controller devices on adding device
+		ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030000", TEST=="power/control", ATTR{power/control}="auto"
+		ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030200", TEST=="power/control", ATTR{power/control}="auto"
+
+		# Enable runtime PM for NVIDIA VGA/3D
+		# controller devices on driver bind
+		ACTION=="bind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030000", TEST=="power/control", ATTR{power/control}="auto"
+		ACTION=="bind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030200", TEST=="power/control", ATTR{power/control}="auto"
+
+		# Disable runtime PM for NVIDIA VGA/3D
+		# controller devices on driver unbind
+		ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030000", TEST=="power/control",  ATTR{power/control}="on"
+		ACTION=="unbind", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x030200", TEST=="power/control", ATTR{power/control}="on"
+	'';
+
+	services.xserver.videoDrivers = ["nvidia"];
 }
