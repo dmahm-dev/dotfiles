@@ -11,3 +11,7 @@ setup xdg user-dirs
 setup cups-pdf output folder
 disable login message (in ~ directory touch .hushlogin)
 check suspend and hibernation
+check vulkan on intel and nvidia
+check vdpau on intel and nvidia
+check NVENC on nvidia
+check vaapi on intel
