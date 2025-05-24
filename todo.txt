@@ -19,3 +19,4 @@ setup prime in optimisations.nix
 setup CUDA
 setup cachix for cuda and for other things
 setup gamepad
+Add 32-bit support for games
