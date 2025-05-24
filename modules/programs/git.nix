@@ -14,6 +14,8 @@
 			alias = {
 				lg = "log --all --graph --oneline";
 			};
+
+			safe.directory = "/etc/nixos";
 		}];
 	};
 
