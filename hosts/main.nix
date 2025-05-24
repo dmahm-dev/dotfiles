@@ -24,7 +24,7 @@
 		useXkbConfig = true; # setup as xkb
 	};
 
-	networking.hostName = "userok"; # Define your hostname.
+	networking.hostName = "SomePC"; # Define your hostname.
 	hardware.enableAllFirmware = true; # Ignore license
 	nixpkgs.config.allowUnfree = true; # Fix for enableAllFirmware
 
