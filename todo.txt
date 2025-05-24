@@ -17,5 +17,5 @@ check NVENC on nvidia
 check vaapi on intel
 setup prime in optimisations.nix
 setup CUDA
-setup cachix for cuda and other things
-
+setup cachix for cuda and for other things
+setup gamepad
