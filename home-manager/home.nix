@@ -9,4 +9,8 @@
 
 		];
 	};
+	
+	imports = [
+		./system/userDirs.nix
+	];
 }
