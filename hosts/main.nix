@@ -39,6 +39,13 @@
 		];
 	};
 
+	# Remove old snapshots
+	nix.gc = {
+		automatic = true;
+		dates = "weekly";
+		options = "--delete-older-than 30d";
+	};
+
 	# Set your time zone.
 	time.timeZone = "Europe/Moscow";
 
