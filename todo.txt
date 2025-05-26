@@ -5,7 +5,6 @@ switch to uki
 make firacode default font everywhere
 change interface in network.nix
 disable ipv6 when turn on vpn
-setup secure boot
 setup xdg portal
 setup cups-pdf output folder
 disable login message (in ~ directory touch .hushlogin)
