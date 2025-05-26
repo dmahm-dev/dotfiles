@@ -2,14 +2,14 @@
 
 {
 	services.xserver = {
-		#enable = true;
-
 		xkb = {
 			layout = "us,ru";
 			variant = "";
 			options = "grp:alt_shift_toggle";
 		};
 
-		extraConfig = "";
+		#extraConfig = "";
 	};
+	
+	programs.xwayland.enable = true;
 }

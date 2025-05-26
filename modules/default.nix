@@ -20,6 +20,6 @@
 		./programs/console.nix
 		./programs/editors.nix
 		./programs/git.nix
-		./programs/x11.nix
+		./programs/xwayland.nix
 	];
 }

@@ -13,3 +13,4 @@ check NVENC on nvidia
 setup prime in optimisations.nix
 setup gamepad
 Enable xserver in modules/programs/x11.nix
+switch to 25.05
