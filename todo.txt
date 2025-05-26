@@ -6,7 +6,6 @@ make firacode default font everywhere
 change interface in network.nix
 disable ipv6 when turn on vpn
 setup xdg portal
-setup cups-pdf output folder
 disable login message (in ~ directory touch .hushlogin)
 check suspend and hibernation
 check vulkan on intel and nvidia

@@ -1,6 +1,8 @@
 { config, ... }:
 
 let
+	# change /etc/nixos/modules/hardware/printing.nix if
+	# you change docsPath
 	docsPath = "${config.home.homeDirectory}/Documents";
 in {
 	xdg.userDirs = {
