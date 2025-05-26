@@ -15,3 +15,5 @@ check vaapi on intel
 setup prime in optimisations.nix
 setup gamepad
 Add 32-bit support for games
+setup sound
+Enable xserver in modules/programs/x11.nix
