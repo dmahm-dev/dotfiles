@@ -20,10 +20,15 @@
 		enable = true;
 		extraPackages = with pkgs; [
 			vpl-gpu-rt
-			intel-vaapi-driver
 			intel-media-driver
+			intel-compute-runtime
 			libvdpau-va-gl
 			intel-ocl
+
+			vulkan-loader
+			vulkan-validation-layers
+
+			ocl-icd
 		];
 	};
 	
@@ -39,6 +44,7 @@
 		nvidia-vaapi-driver
 		nvtopPackages.nvidia
 		cudaPackages.cuda_nvcc
+		cudaPackages.cudnn
 	];
 
 	# NVIDIA
@@ -52,6 +58,7 @@
 		#prime.nvidiaBusId = "PCI:1@0:0.0";
 		#prime.intelBusId = "PCI:0@0:2:0";
 		nvidiaPersistenced = true; # turn on hibernation
+		
 	};
 
 	boot.extraModprobeConfig = 

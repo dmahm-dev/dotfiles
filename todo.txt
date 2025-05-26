@@ -13,7 +13,5 @@ check vdpau on intel and nvidia
 check NVENC on nvidia
 check vaapi on intel
 setup prime in optimisations.nix
-setup CUDA
-setup cachix for cuda and for other things
 setup gamepad
 Add 32-bit support for games
