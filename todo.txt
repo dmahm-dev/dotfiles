@@ -8,12 +8,8 @@ disable ipv6 when turn on vpn
 setup xdg portal
 disable login message (in ~ directory touch .hushlogin)
 check suspend and hibernation
-check vulkan on intel and nvidia
-check vdpau on intel and nvidia
+check vdpau, vaapi, vulkan, opencl on intel and nvidia
 check NVENC on nvidia
-check vaapi on intel
 setup prime in optimisations.nix
 setup gamepad
-Add 32-bit support for games
-setup sound
 Enable xserver in modules/programs/x11.nix

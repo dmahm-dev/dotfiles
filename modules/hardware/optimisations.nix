@@ -18,6 +18,7 @@
 	# INTEL
 	hardware.graphics = {
 		enable = true;
+		enable32Bit = true;
 		extraPackages = with pkgs; [
 			vpl-gpu-rt
 			intel-media-driver
@@ -29,6 +30,16 @@
 			vulkan-validation-layers
 
 			ocl-icd
+			libva
+			libvdpau
+		];
+		extraPackages32 = with pkgs; [
+			libva
+			libvdpau
+			intel-media-driver
+			vulkan-loader
+			vulkan-validation-layers
+			nvidia-vaapi-driver
 		];
 	};
 	
