@@ -27,6 +27,7 @@
 				./hosts/main.nix
 				./modules/default.nix
 
+				./modules/programs/plasma.nix
 				/*nixos-hardware.nixosModules.common.cpu.intel.tiger-lake
 				nixos-hardware.nixosModules.common.pc.ssd*/
 			];
