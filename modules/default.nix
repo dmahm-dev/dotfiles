@@ -10,7 +10,7 @@
 		./hardware/udisks.nix
 		./hardware/thermal-control.nix
 		./hardware/printing.nix
-		./hardware/mouseNtouchpad.nix
+		./hardware/periphery.nix
 		./hardware/sound.nix
 		./services/journald.nix
 		./services/sysctl.nix

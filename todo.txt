@@ -11,5 +11,4 @@ check suspend and hibernation
 check vdpau, vaapi, vulkan, opencl on intel and nvidia
 check NVENC on nvidia
 setup prime in optimisations.nix
-setup gamepad
 switch to 25.05
