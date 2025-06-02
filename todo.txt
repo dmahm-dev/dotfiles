@@ -12,3 +12,7 @@ check vdpau, vaapi, vulkan, opencl on intel and nvidia
 check NVENC on nvidia
 setup prime in optimisations.nix
 make qt and gtk looks the same
+setup and check cachix
+building cuda is too long
+nixos-rebuild make everything sequentially
+rename userDirs in plasma
