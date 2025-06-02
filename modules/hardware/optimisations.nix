@@ -60,7 +60,6 @@
 
 	# NVIDIA
 	hardware.nvidia = {
-		#enabled = true;
 		modesetting.enable = true;
 		nvidiaSettings = true;
 		open = false; # d3cold is not working

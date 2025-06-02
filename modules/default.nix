@@ -21,5 +21,6 @@
 		./programs/editors.nix
 		./programs/git.nix
 		./programs/wayland.nix
+		./programs/plasma.nix
 	];
 }

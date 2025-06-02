@@ -11,3 +11,4 @@ check suspend and hibernation
 check vdpau, vaapi, vulkan, opencl on intel and nvidia
 check NVENC on nvidia
 setup prime in optimisations.nix
+make qt and gtk looks the same

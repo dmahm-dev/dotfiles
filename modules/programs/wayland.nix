@@ -2,6 +2,7 @@
 
 {
 	services.xserver = {
+		#enable = true;
 		xkb = {
 			layout = "us,ru";
 			variant = "";
@@ -18,9 +19,9 @@
 		wl-clipboard
 	];
 
-	qt = {
-		enable = true;
-		platformTheme = "gnome";
-		style = "adwaita";
-	};
+	#qt = {
+		#enable = true;
+		#platformTheme = "gnome";
+		#style = "adwaita";
+	#};
 }
