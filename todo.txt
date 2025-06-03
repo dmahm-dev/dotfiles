@@ -7,7 +7,6 @@ change interface in network.nix
 disable ipv6 when turn on vpn
 setup xdg portal
 disable login message (in ~ directory touch .hushlogin)
-check suspend and hibernation
 make qt and gtk looks the same
 setup and check cachix
 building cuda is too long
