@@ -43,6 +43,7 @@
 	# List packages installed in system profile
 	environment.systemPackages = with pkgs; [
 		cachix
+		home-manager
 	];
 
 	# Open ports in the firewall.
