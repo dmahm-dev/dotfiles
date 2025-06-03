@@ -11,3 +11,4 @@ building cuda is too long
 nixos-rebuild make everything sequentially
 rename userDirs in dolphin
 setup sddm theme
+take tips from hardware-optimisation from flake.nix
