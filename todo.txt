@@ -3,7 +3,6 @@ ban iptable
 install fail2ban
 switch to uki
 make firacode default font everywhere
-change interface in network.nix
 disable ipv6 when turn on vpn
 disable login message (in ~ directory touch .hushlogin)
 make qt and gtk looks the same

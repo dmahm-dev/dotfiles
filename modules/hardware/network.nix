@@ -4,7 +4,7 @@
 	programs.captive-browser = {
 		enable = true;
 		browser = "vivaldi";
-		interface = "enp1s0";
+		interface = "wlo1";
 	};
 
 	services.avahi = {
