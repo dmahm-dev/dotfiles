@@ -1,4 +1,4 @@
-{...}:
+{pkgs,...}:
 
 {
 	services = {
@@ -11,5 +11,12 @@
 			enable = true;
 			user = "userok";
 		};
+	};
+
+	xdg.portal = {
+		enable = true;
+		extraPortals = with pkgs; [
+			kdePackages.xdg-desktop-portal-kde
+		];
 	};
 }
