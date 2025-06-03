@@ -6,9 +6,6 @@ make firacode default font everywhere
 disable ipv6 when turn on vpn
 disable login message (in ~ directory touch .hushlogin)
 make qt and gtk looks the same
-setup and check cachix
-building cuda is too long
-nixos-rebuild make everything sequentially
 rename userDirs in dolphin
 setup sddm theme
 take tips from hardware-optimisation from flake.nix
