@@ -69,8 +69,7 @@
 		prime.sync.enable = true;
 		prime.nvidiaBusId = "PCI:1@0:0:0";
 		prime.intelBusId = "PCI:0@0:2:0";
-		nvidiaPersistenced = true; # turn on hibernation
-		
+		powerManagement.enable = true; # turn on systemd services
 	};
 
 	boot.extraModprobeConfig = 
