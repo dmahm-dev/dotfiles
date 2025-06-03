@@ -7,4 +7,6 @@
 		editor = false;
 	};
 	boot.loader.efi.canTouchEfiVariables = true;
+
+	boot.kernelParams = [ "nowatchdog" ];
 }
