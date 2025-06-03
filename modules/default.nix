@@ -17,6 +17,7 @@
 		./services/upower.nix
 		./services/bootloader.nix
 		./services/nix.nix
+		./services/systemd.nix
 		./programs/console.nix
 		./programs/editors.nix
 		./programs/git.nix
