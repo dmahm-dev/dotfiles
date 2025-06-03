@@ -32,6 +32,9 @@
 			ocl-icd
 			libva
 			libvdpau
+			pciutils
+
+			nvidia-vaapi-driver
 		];
 		extraPackages32 = with pkgs; [
 			libva
@@ -52,7 +55,6 @@
 		vulkan-tools
 		nvtopPackages.intel
 		#nvidia
-		nvidia-vaapi-driver
 		nvtopPackages.nvidia
 		cudaPackages.cuda_nvcc
 		cudaPackages.cudnn
@@ -64,9 +66,9 @@
 		nvidiaSettings = true;
 		open = false; # d3cold is not working
 		package = config.boot.kernelPackages.nvidiaPackages.stable;
-		#prime.sync.enable = true;
-		#prime.nvidiaBusId = "PCI:1@0:0.0";
-		#prime.intelBusId = "PCI:0@0:2:0";
+		prime.sync.enable = true;
+		prime.nvidiaBusId = "PCI:1@0:0:0";
+		prime.intelBusId = "PCI:0@0:2:0";
 		nvidiaPersistenced = true; # turn on hibernation
 		
 	};
