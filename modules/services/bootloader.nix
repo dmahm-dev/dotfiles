@@ -1,4 +1,4 @@
-{...}:
+{pkgs,...}:
 
 {
 	boot.loader.systemd-boot = {
@@ -9,4 +9,9 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 
 	boot.kernelParams = [ "nowatchdog" ];
+
+	environment.systemPackages = with pkgs; [
+		efibootmgr
+		qrencode
+	];
 }

@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 
 {
 	# Enable pipewire
@@ -11,4 +11,12 @@
 		pulse.enable = true;
 		# jack.enable = true;
 	};
+
+	hardware.firmware = [
+		pkgs.sof-firmware
+	];
+	
+	environment.systemPackages = [
+		pkgs.qpwgraph
+	];
 }

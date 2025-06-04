@@ -1,4 +1,4 @@
-{...}:
+{pkgs,...}:
 
 {
 	programs.captive-browser = {
@@ -43,4 +43,10 @@
 		maxretry = 5;
 		ignoreIP = ["127.0.0.1/8" "::1"];
 	};
+
+	# network utils
+	environment.systemPackages = with pkgs; [
+		ethtool
+		wirelesstools
+	];
 }

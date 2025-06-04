@@ -1,6 +1,17 @@
+Stage 1. TTY:
 switch to uki
+disable login and startup messages
+
+Stage 2. DM Tweaks:
 make firacode default font everywhere
-disable ipv6 when turn on vpn
 make qt and gtk looks the same
 setup sddm theme
-disable login and startup messages
+
+Stage 3. User-space things:
+Setup and configure:
+	steam
+	vivaldi
+	portproton
+	libreoffice
+	mpv
+	

@@ -23,5 +23,7 @@
 		./programs/git.nix
 		./programs/wayland.nix
 		./programs/plasma.nix
+		./programs/codecs.nix
+		./programs/cli-fun.nix
 	];
 }

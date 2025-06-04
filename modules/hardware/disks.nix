@@ -12,5 +12,8 @@
 	environment.systemPackages = with pkgs; [
 		smartmontools
 		nvme-cli
+		exfatprogs
+		dosfstools
+		sysfsutils
 	];
 }
