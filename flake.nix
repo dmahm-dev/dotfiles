@@ -8,7 +8,6 @@
 			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		# nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 	};
 
 	outputs = { self, nixpkgs, nixpkgsUnstable, 
@@ -28,8 +27,6 @@
 				./modules/default.nix
 
 				./modules/programs/plasma.nix
-				/*nixos-hardware.nixosModules.common.cpu.intel.tiger-lake
-				nixos-hardware.nixosModules.common.pc.ssd*/
 			];
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {
@@ -38,7 +35,6 @@
 				config.allowUnfree = true;
 				config.cudaSupport = true;
 			};
-			#pkgs = nixpkgs.legacyPackages."x86_64-linux";
 			modules = [ ./home-manager/home.nix ];
 		};
 	};

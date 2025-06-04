@@ -7,7 +7,7 @@
 		./hardware/modprobe.nix
 		./hardware/bluetooth.nix
 		./hardware/network.nix
-		./hardware/udisks.nix
+		./hardware/disks.nix
 		./hardware/thermal-control.nix
 		./hardware/printing.nix
 		./hardware/periphery.nix
