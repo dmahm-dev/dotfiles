@@ -13,5 +13,9 @@
 	imports = [
 		./system/userDirs.nix
 		./system/hushlogin.nix
+
+		./programs/libreoffice.nix
+		./programs/vivaldi.nix
+		./programs/mpv.nix
 	];
 }
