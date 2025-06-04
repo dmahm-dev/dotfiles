@@ -12,5 +12,6 @@
 	
 	imports = [
 		./system/userDirs.nix
+		./system/hushlogin.nix
 	];
 }

@@ -21,3 +21,4 @@ minutes, on "low battery" pause session after 5 minutes, dim screen
 after 2 minutes, turn off screen after 5 minutes, energy consumption
 profile to "eco", in "session" uncheck request confirmation, restore
 applications manually.
+6) Dolphin: rename entry points
