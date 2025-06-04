@@ -20,5 +20,5 @@ after 15 minutes, dim screen after 5 minutes, turn off screen after 10
 minutes, on "low battery" pause session after 5 minutes, dim screen
 after 2 minutes, turn off screen after 5 minutes, energy consumption
 profile to "eco", in "session" uncheck request confirmation, restore
-applications manually.
+applications manually, in "fonts" change monospace to fira-code.
 6) Dolphin: rename entry points

@@ -3,7 +3,6 @@ switch to uki
 disable login and startup messages
 
 Stage 2. DM Tweaks:
-make firacode default font everywhere
 make qt and gtk looks the same
 setup sddm theme
 
