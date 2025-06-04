@@ -15,6 +15,7 @@
 	networking.networkmanager = {
 		enable = true;
 		dns = "systemd-resolved";
+		wifi.macAddress = "stable-ssid";
 	};
 	services.resolved = {
 		enable = true;

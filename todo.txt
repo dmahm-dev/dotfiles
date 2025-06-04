@@ -6,4 +6,3 @@ make firacode default font everywhere
 disable ipv6 when turn on vpn
 make qt and gtk looks the same
 setup sddm theme
-setup networkManager
