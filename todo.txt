@@ -1,8 +1,6 @@
-setup firewalld
-ban iptable
-install fail2ban
 switch to uki
 make firacode default font everywhere
 disable ipv6 when turn on vpn
 make qt and gtk looks the same
 setup sddm theme
+disable login and startup messages
