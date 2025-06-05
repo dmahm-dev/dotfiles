@@ -4,6 +4,7 @@
 	programs.bash = {
 		#undistracMe.enable = true;
 		#undistractMe.playSound = true;
+		# copied to home-manager/programs/console.nix
 		shellInit = "shopt -s cdspell histappend histreedit checkjobs";
 	};
 

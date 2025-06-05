@@ -13,6 +13,7 @@
 		./hardware/printing.nix
 		./hardware/periphery.nix
 		./hardware/sound.nix
+		./hardware/gamepad.nix
 
 		./services/journald.nix
 		./services/sysctl.nix
@@ -29,5 +30,7 @@
 		./programs/plasma.nix
 		./programs/codecs.nix
 		./programs/cli-fun.nix
+		./programs/steam.nix
+		./programs/syncthing.nix
 	];
 }
