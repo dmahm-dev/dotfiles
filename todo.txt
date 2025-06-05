@@ -8,7 +8,5 @@ setup sddm theme
 
 Stage 3. User-space things:
 Setup and configure:
-	portproton
 	gamescope
-	warehouse
 	vivaldi
