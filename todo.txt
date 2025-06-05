@@ -10,3 +10,5 @@ Stage 3. User-space things:
 Setup and configure:
 	gamescope
 	vivaldi
+	nvim
+	ms-code
