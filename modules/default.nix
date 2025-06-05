@@ -22,6 +22,7 @@
 		./services/nix.nix
 		./services/systemd.nix
 		./services/fonts.nix
+		./services/flatpak.nix
 
 		./programs/console.nix
 		./programs/editors.nix

@@ -8,10 +8,12 @@
 			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 	};
 
 	outputs = { self, nixpkgs, nixpkgsUnstable, 
-							home-manager, ... }@inputs:
+							home-manager, nix-flatpak, ... }@inputs:
 	let
 		unstable = import nixpkgsUnstable {
 			config.allowUnfree = true;
@@ -27,6 +29,8 @@
 				./modules/default.nix
 
 				./modules/programs/plasma.nix
+
+				nix-flatpak.nixosModules.nix-flatpak
 			];
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {

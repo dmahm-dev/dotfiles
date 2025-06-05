@@ -1,5 +1,6 @@
 Stage 1. TTY:
 disable login and startup messages
+migrate to dnsmasq from resolved
 
 Stage 2. DM Tweaks:
 make qt and gtk looks the same
@@ -9,5 +10,5 @@ Stage 3. User-space things:
 Setup and configure:
 	portproton
 	gamescope
-	obsidian
-	flatpak
+	warehouse
+	vivaldi
