@@ -10,9 +10,10 @@
 		};
 
 		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+		nvf.url = "github:notashelf/nvf";
 	};
 
-	outputs = { self, nixpkgs, nixpkgsUnstable, 
+	outputs = { self, nixpkgs, nixpkgsUnstable, nvf,
 							home-manager, nix-flatpak, ... }@inputs:
 	let
 		unstable = import nixpkgsUnstable {
@@ -31,6 +32,7 @@
 				./modules/programs/plasma.nix
 
 				nix-flatpak.nixosModules.nix-flatpak
+				nvf.nixosModules.default
 			];
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {
