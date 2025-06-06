@@ -10,13 +10,15 @@
 			statusline.lualine.enable = true;
 			telescope.enable = true;
 			autocomplete.nvim-cmp.enable = true;
+			lsp.enable = true;
+
 			theme = {
 				enable = true;
 				name = "gruvbox";
 				style = "dark";
 			};
+
 			languages = {
-				enableLSP = true;
 				enableTreesitter = true;
 				nix.enable = true;
 			};
