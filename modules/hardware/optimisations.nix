@@ -57,7 +57,6 @@
 		#nvidia
 		nvtopPackages.nvidia
 		cudaPackages.cuda_nvcc
-		cudaPackages.cudnn
 	];
 
 	# NVIDIA
