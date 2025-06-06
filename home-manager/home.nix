@@ -7,6 +7,7 @@
 		stateVersion = "25.05";
 		packages = with pkgs; [
 			libreoffice-fresh
+			gamemode
 		];
 	};
 	programs.mpv.enable = true;
@@ -19,5 +20,6 @@
 		./programs/console.nix
 		./programs/vivaldi.nix
 		./programs/mangohud.nix
+		./programs/vscode.nix
 	];
 }
