@@ -19,4 +19,8 @@
 			kdePackages.xdg-desktop-portal-kde
 		];
 	};
+
+	environment.plasma6.excludePackages = [
+		pkgs.kdePackages.discover
+	];
 }
