@@ -1,6 +1,7 @@
 Stage 1. TTY:
 disable login and startup messages
 migrate to dnsmasq from resolved
+add le9 patch
 
 Stage 2. DM Tweaks:
 make qt and gtk looks the same
