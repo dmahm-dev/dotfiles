@@ -15,6 +15,12 @@
 	boot.kernel.sysctl."vm.max_map_count" = 2147483642;
 	boot.kernel.sysctl."dev.i915.perf_stream_paranoid" = 0;	
 
+	# disable famous 20 years bug
+	boot.postBootCommands = 
+		lib.strings.replaceStrings ["\t"] [""] ''
+		echo 200 > /sys/kernel/mm/lru_gen/min_ttl_ms
+	'';
+
 	# INTEL
 	hardware.graphics = {
 		enable = true;
@@ -56,7 +62,7 @@
 		nvtopPackages.intel
 		#nvidia
 		nvtopPackages.nvidia
-		cudaPackages.cuda_nvcc
+		cudaPackages.cudatoolkit
 	];
 
 	# NVIDIA
