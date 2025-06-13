@@ -1,5 +1,6 @@
 Stage 1. TTY:
 disable login and startup messages
+configure plymouth
 
 Stage 2. DM Tweaks:
 make qt and gtk looks the same

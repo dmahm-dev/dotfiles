@@ -12,8 +12,5 @@
 			gst-plugins-bad
 			gst-plugins-ugly
 			gst-vaapi
-			icamerasrc-ipu6epmtl
-			icamerasrc-ipu6ep
-			icamerasrc-ipu6
 	]);
 }

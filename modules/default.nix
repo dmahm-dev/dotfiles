@@ -23,6 +23,7 @@
 		./services/systemd.nix
 		./services/fonts.nix
 		./services/flatpak.nix
+		./services/plymouth.nix
 
 		./programs/console.nix
 		./programs/editors.nix

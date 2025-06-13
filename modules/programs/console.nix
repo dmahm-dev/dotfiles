@@ -13,4 +13,6 @@
 		font = "LatGrkCyr-12x22";
 		useXkbConfig = true; # setup as xkb
 	};
+
+	services.getty.loginOptions = "--noissue --noclear";
 }
