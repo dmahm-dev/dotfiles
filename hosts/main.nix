@@ -46,6 +46,8 @@
 		home-manager
 	];
 
+	boot.kernelPackages = pkgs.linuxPackages_latest;
+
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
 	# networking.firewall.allowedUDPPorts = [ ... ];
