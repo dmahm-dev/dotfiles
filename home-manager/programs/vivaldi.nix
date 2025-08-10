@@ -22,12 +22,4 @@ in {
 		];
 		package = pkgs.vivaldi;
 	};
-
-	# copy vivaldi settings from ./settings
-	home.activation.copyVivaldiSettings =
-		lib.hm.dag.entryAfter ["writeBoundary"] ''
-		if [ ! -e "${vivaldiPath}/Preferences" ]; then
-			cp ${./settings}/Preferences ${vivaldiPath}
-		fi
-	'';
 }
