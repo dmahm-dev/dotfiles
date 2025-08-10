@@ -14,6 +14,7 @@
 		./hardware/periphery.nix
 		./hardware/sound.nix
 		./hardware/gamepad.nix
+		./hardware/cpu.nix
 
 		./services/journald.nix
 		./services/sysctl.nix
