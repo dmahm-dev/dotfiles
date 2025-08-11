@@ -35,5 +35,6 @@
 		./programs/cli-fun.nix
 		./programs/steam.nix
 		./programs/syncthing.nix
+		./programs/kdeconnect.nix
 	];
 }

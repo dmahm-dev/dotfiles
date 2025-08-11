@@ -22,6 +22,5 @@
 		./programs/mangohud.nix
 		./programs/vscode.nix
 		./programs/keepassxc.nix
-		./programs/kdeconnect.nix
 	];
 }
