@@ -25,7 +25,7 @@
 		./services/fonts.nix
 		./services/flatpak.nix
 		./services/plymouth.nix
-		./services/zapret.nix
+#		./services/zapret.nix
 
 		./programs/console.nix
 		./programs/editors.nix
@@ -39,5 +39,6 @@
 		./programs/kdeconnect.nix
 		./programs/torrent.nix
 		./programs/keepassxc.nix
+		./programs/discord.nix
 	];
 }
