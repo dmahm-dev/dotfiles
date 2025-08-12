@@ -12,6 +12,7 @@
 		"nowatchdog" 
 		"quiet" "loglevel=3" "vt.global_cursor_default=0"
 		"splash"
+		"udev.log_level=3"
 	];
 
 	environment.systemPackages = with pkgs; [

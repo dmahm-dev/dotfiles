@@ -18,8 +18,4 @@
 			safe.directory = "/etc/nixos";
 		}];
 	};
-
-	environment.shellAliases = {
-		#ls = "ls --something";
-	};
 }

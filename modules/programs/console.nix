@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 
 {
 	programs.bash = {
@@ -10,9 +10,9 @@
 
 	# vconsole	
 	console = {
-		font = "LatGrkCyr-12x22";
-		useXkbConfig = true; # setup as xkb
+		packages = with pkgs; [ kbd terminus_font ];
+		font = "ter-c22b";
+		keyMap = "us";
+		#useXkbConfig = true; # setup as xkb
 	};
-
-	services.getty.loginOptions = "--noissue --noclear";
 }
