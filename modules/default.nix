@@ -25,6 +25,7 @@
 		./services/fonts.nix
 		./services/flatpak.nix
 		./services/plymouth.nix
+		./services/zapret.nix
 
 		./programs/console.nix
 		./programs/editors.nix
