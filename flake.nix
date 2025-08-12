@@ -14,7 +14,7 @@
 	};
 
 	outputs = { self, nixpkgs, nixpkgsUnstable, nvf,
-							home-manager, nix-flatpak, ... }@inputs:
+				home-manager, nix-flatpak, ... }@inputs:
 	let
 		unstable = import nixpkgsUnstable {
 			config.allowUnfree = true;

@@ -7,9 +7,9 @@ in {
 		vivaldi-ffmpeg-codecs
 	];
 
-	programs.chromium.nativeMessagingHosts = [
-		pkgs.kdePackages.plasma-browser-integration
-	];
+ 	programs.chromium.nativeMessagingHosts = [
+ 		pkgs.kdePackages.plasma-browser-integration
+ 	];
 
 	programs.chromium = {
 		enable = true;

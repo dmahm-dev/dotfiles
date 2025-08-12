@@ -36,5 +36,7 @@
 		./programs/steam.nix
 		./programs/syncthing.nix
 		./programs/kdeconnect.nix
+		./programs/torrent.nix
+		./programs/keepassxc.nix
 	];
 }
