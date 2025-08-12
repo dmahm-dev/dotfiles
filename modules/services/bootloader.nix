@@ -3,10 +3,11 @@
 {
 	boot.loader.systemd-boot = {
 		enable = true;
-		configurationLimit = 20;
+		configurationLimit = 10;
 		editor = false;
 	};
 	boot.loader.efi.canTouchEfiVariables = true;
+	boot.loader.timeout = 1;
 
 	boot.kernelParams = [ 
 		"nowatchdog" 

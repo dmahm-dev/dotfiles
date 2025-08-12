@@ -6,7 +6,7 @@
 		"i915.enable_guc=3"
 	];
 	boot.initrd = {
-		availableKernelModules = ["i915"];
+		kernelModules = ["i915" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
 		compressor = "cat";
 	};
 	hardware.cpu.intel.updateMicrocode = true;

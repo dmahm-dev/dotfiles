@@ -6,6 +6,11 @@
 		displayManager.sddm = {
 			enable = true;
 			wayland.enable = true;
+			settings = {
+ 				General = {
+ 					MinimumVT = 1;
+ 				};
+			};
 		};
 		displayManager.autoLogin = {
 			enable = true;
