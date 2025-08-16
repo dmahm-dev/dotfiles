@@ -9,6 +9,9 @@
 		kernelModules = ["i915" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
 		compressor = "cat";
 	};
+
+	boot.kernelModules = [ "ntsync" ];
+
 	hardware.cpu.intel.updateMicrocode = true;
 
 	# for games

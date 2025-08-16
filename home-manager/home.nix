@@ -8,6 +8,7 @@
 		packages = with pkgs; [
 			libreoffice-fresh
 			gamemode
+			telegram-desktop
 		];
 	};
 	programs.mpv.enable = true;

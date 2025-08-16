@@ -15,7 +15,7 @@ in
 	boot.initrd.verbose = false;
 	boot.consoleLogLevel = 0;
 
-	systemd.services.plymouth-quit.after = [ "display-manager.service" ];
-	systemd.services.display-manager.after = [ "plymouth-quit.service" ];
+	#systemd.services.plymouth-quit.after = [ "display-manager.service" ];
+	#systemd.services.display-manager.after = [ "plymouth-quit.service" ];
 
 }
