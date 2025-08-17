@@ -10,6 +10,7 @@
 			gamemode
 			telegram-desktop
 			libwebp
+			kdePackages.kalgebra
 		];
 	};
 	programs.mpv.enable = true;
