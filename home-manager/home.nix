@@ -9,6 +9,7 @@
 			libreoffice-fresh
 			gamemode
 			telegram-desktop
+			libwebp
 		];
 	};
 	programs.mpv.enable = true;
