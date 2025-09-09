@@ -20,7 +20,7 @@
 		'';
 
 		shellAliases = {
-			rebuild = "sudo nixos-rebuild switch -v";
+			rebuild = "sudo nixos-rebuild switch -v && home-manager switch && flatpak update";
 		};
 	};
 

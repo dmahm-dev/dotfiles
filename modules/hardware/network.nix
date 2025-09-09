@@ -32,9 +32,10 @@
 	# firewall settings
 	networking.nftables.enable = true;
 	networking.firewall = {
-		# allowedUDPPorts = [  ];
+		# 22000 и 21027 - syncthing
+		allowedUDPPorts = [ 22000 21027 ];
 		# allowedUDPPortRanges = [ {from = ; to = ;} ];
-		# allowedTCPPorts = [  ];
+		 allowedTCPPorts = [ 22000 ];
 		# allowedTCPPortRanges = [ {from = ; to = ;} ];
 	};
 

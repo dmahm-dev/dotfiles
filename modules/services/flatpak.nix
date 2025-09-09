@@ -2,6 +2,8 @@
 
 {
 	services.flatpak.enable = true;
+	services.flatpak.update.onActivation = false;
+	services.flatpak.update.auto.enable = false;
 	environment.systemPackages = with pkgs; [
 		flatpak
 		flatpak-xdg-utils
