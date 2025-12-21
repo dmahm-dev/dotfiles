@@ -33,7 +33,7 @@
 			intel-media-driver
 			intel-compute-runtime
 			libvdpau-va-gl
-			intel-ocl
+			#intel-ocl #проблемы со скачиванием
 
 			vulkan-loader
 			vulkan-validation-layers

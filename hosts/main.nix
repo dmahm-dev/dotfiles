@@ -48,6 +48,16 @@
 
 	boot.kernelPackages = pkgs.linuxPackages_latest;
 
+	nix.settings = {
+		substituters = [
+			"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+			"https://cache.nixos.org"
+		];
+		trusted-public-keys = [
+			"cache.nixos.org-1:6NCHdD59x431o0GWypbMrAURkbJ16ZPMQFGspcDShjY="
+		];
+	};
+
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
 	# networking.firewall.allowedUDPPorts = [ ... ];

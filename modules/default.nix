@@ -13,7 +13,6 @@
 		./hardware/printing.nix
 		./hardware/periphery.nix
 		./hardware/sound.nix
-		./hardware/gamepad.nix
 		./hardware/cpu.nix
 
 		./services/journald.nix
@@ -42,5 +41,6 @@
 		./programs/keepassxc.nix
 		./programs/discord.nix
 		./programs/python.nix
+		./programs/smallProgs.nix
 	];
 }
