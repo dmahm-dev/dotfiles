@@ -4,7 +4,7 @@
 	home = {
 		username = "userok";
 		homeDirectory = "/home/userok";
-		stateVersion = "25.05";
+		stateVersion = "25.11";
 		packages = with pkgs; [
 			libreoffice-fresh
 			gamemode
