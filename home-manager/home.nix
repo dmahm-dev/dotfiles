@@ -24,5 +24,6 @@
 		./programs/vivaldi.nix
 		./programs/mangohud.nix
 		./programs/vscode.nix
+		./programs/minecraft.nix
 	];
 }

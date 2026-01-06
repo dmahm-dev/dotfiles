@@ -1,33 +1,25 @@
 {pkgs, ...}:
 
-let
-    workDir = "/etc/nixos/modules/services/zapret";
-in
 {
-    systemd.services.zapret_discord_youtube = {
-        description = "Zapret service";
-        wants = [ "network-online.target" ];
-        after = [ "network-online.target" ];
-
-        serviceConfig = {
-            Type = "simple";
-            WorkingDirectory = "${workDir}";
-            User = "root";
-
-            Environment = "PATH=${pkgs.bash}/bin:${pkgs.sudo}/bin:${pkgs.git}/bin:${pkgs.coreutils}/bin:${pkgs.nftables}/bin:${pkgs.gnugrep}/bin:${pkgs.gnused}/bin:${pkgs.inetutils}/bin";
-
-            ExecStart = [
-                "${pkgs.bash}/bin/bash ${workDir}/main_script.sh -nointeractive"
-            ];
-            ExecStop = [
-                "${pkgs.bash}/bin/bash ${workDir}/stop_and_clean_nft.sh"
-            ];
-            ExecStopPost = [
-                "${pkgs.coreutils}/bin/echo \"Сервис завершён\""
-            ];
-            PIDFile = "/run/zapret_discord_youtube";
-        };
-
-        wantedBy = [ "multi-user.target" ];
+    services.zapret = {
+        enable = true;
+        whitelist = [
+            "youtube.com"
+            "youtu.be"
+            "ytimg.com"
+            "googlevideo.com"
+            "rutracker.org"
+        ];
+        udpSupport = true;
+        udpPorts = [
+            "443" "19294:19344" "50000:50100"
+        ];
+        params = [
+            "--dpi-desync=fake"
+            "--dpi-desync-ttl=3"
+            "--orig-ttl=1"
+            "--orig-mod-start=s1"
+            "--orig-mod-cutoff=d1"
+        ];
     };
 }

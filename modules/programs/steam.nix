@@ -8,7 +8,6 @@
 		extest.enable = true; # gamepad thing
 		protontricks.enable = true;
 # 		gamescopeSession.enable = true;
-		extraCompatPackages = [pkgs.proton-ge-bin];
 # 		package = pkgs.steam.override {
 # 			extraEnv = {
 # 				MANGOHUD = true;
