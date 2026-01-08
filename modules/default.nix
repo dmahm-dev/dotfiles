@@ -39,7 +39,7 @@
 		./programs/kdeconnect.nix
 		./programs/torrent.nix
 		./programs/keepassxc.nix
-		#./programs/discord.nix
+		./programs/discord.nix
 		./programs/python.nix
 		./programs/smallProgs.nix
 	];

@@ -22,6 +22,8 @@
 		enable = true;
 		extraPortals = with pkgs; [
 			kdePackages.xdg-desktop-portal-kde
+			kdePackages.ocean-sound-theme
+			kdePackages.oxygen-sounds
 		];
 	};
 
