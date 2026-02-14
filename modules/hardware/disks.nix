@@ -15,5 +15,8 @@
 		exfatprogs
 		dosfstools
 		sysfsutils
+		parted
+		gparted
+		kdePackages.filelight
 	];
 }

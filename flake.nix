@@ -8,6 +8,10 @@
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		elyprismlauncher = {
+            url = "github:ElyPrismLauncher/ElyPrismLauncher";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
 		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 		nvf.url = "github:notashelf/nvf";
@@ -21,6 +25,7 @@
 			config.cudaSupport = true;
 			system = "x86_64-linux";
 		};
+		system = "x86_64-linux";
 	in {
 		nixosConfigurations."SomePC" = inputs.nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
