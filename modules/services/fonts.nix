@@ -6,6 +6,9 @@
 		roboto
 		vista-fonts
 		corefonts
+		noto-fonts
+		noto-fonts-cjk-sans
+		noto-fonts-color-emoji
 	];
 
 	fonts.fontDir.enable = true;

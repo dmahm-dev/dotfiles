@@ -1,7 +1,6 @@
 {pkgs, lib, ...}:
 
 {
-	services.flatpak.enable = true;
 	environment.systemPackages = with pkgs; [
 		flatpak
 		flatpak-xdg-utils
@@ -10,10 +9,21 @@
 		libportal
 	];
 
-	services.flatpak.packages = [
-		"md.obsidian.Obsidian"
-		"ru.linux_gaming.PortProton"
-	];
+	services.flatpak = {
+		enable = true;
+		packages = [
+			"md.obsidian.Obsidian"
+			"ru.linux_gaming.PortProton"
+		];
+		overrides = {
+			global.Context = {
+				filesystems = [
+					"/nix/store:ro"
+					"xdg-data/fonts:ro"
+				];
+			};
+		};
+	};
 
 	environment.shellAliases = {
 		portproton = "flatpak run ru.linux_gaming.PortProton";
