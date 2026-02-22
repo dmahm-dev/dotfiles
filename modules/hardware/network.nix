@@ -73,5 +73,6 @@
 		ethtool
 		wirelesstools
 		firewalld-gui
+		dnsutils
 	];
 }
