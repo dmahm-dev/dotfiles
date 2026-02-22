@@ -16,6 +16,7 @@
 		enable = true;
 		dns = "systemd-resolved";
 		wifi.macAddress = "stable-ssid";
+		plugins = [ pkgs.networkmanager-openvpn ];
 	};
 	services.resolved = {
 		enable = true;
