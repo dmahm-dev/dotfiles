@@ -19,9 +19,13 @@
 	};
 	services.resolved = {
 		enable = true;
-		#dnssec = "allow-downgrade";
+		dnssec = "allow-downgrade";
 		dnsovertls = "opportunistic";
-		extraConfig = "MulticastDNS=no";
+		fallbackDns = [ "1.1.1.1" "1.0.0.1" ];
+		extraConfig = ''
+			MulticastDNS=no
+			DNS=1.1.1.1 1.0.0.1
+		'';
 	};
 
 	boot.kernel.sysctl = {
@@ -29,17 +33,21 @@
 		"net.ipv4.tcp_slow_start_after_idle" = 0;
 	};
 
-	# firewall settings
-#	networking.nftables.enable = true;
-#	networking.firewall = {
-		# 22000 и 21027 - syncthing
-#		allowedUDPPorts = [ 22000 21027 ];
-		# allowedUDPPortRanges = [ {from = ; to = ;} ];
-#		 allowedTCPPorts = [ 22000 ];
-		# allowedTCPPortRanges = [ {from = ; to = ;} ];
-#	};
 	networking.firewall.enable = true;
-	networking.nftables.enable = true;
+	networking.nftables = {
+		enable = true;
+		#zapret thing
+		ruleset = ''
+			table inet zapret {
+				chain divert {
+					type filter hook output priority mangle; policy accept;
+					ip daddr { 127.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 10.0.0.0/8 } accept
+					tcp dport { 80, 443, 2053, 2083, 2087, 2096, 8443 } counter queue num 200 bypass
+					udp dport { 443, 19294-19344, 50000-50100 } counter queue num 200 bypass
+				}
+			}
+		'';
+	};
 	services.firewalld = {
 		enable = true;
 		zones.home.services = [
