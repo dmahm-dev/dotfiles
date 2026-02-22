@@ -11,6 +11,7 @@
 			telegram-desktop
 			libwebp
 			kdePackages.kalgebra
+			protonup-qt
 		];
 	};
 	programs.mpv.enable = true;
