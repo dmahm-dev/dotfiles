@@ -14,6 +14,7 @@
 		packages = [
 			"md.obsidian.Obsidian"
 			"ru.linux_gaming.PortProton"
+			"https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref"
 		];
 		overrides = {
 			global.Context = {

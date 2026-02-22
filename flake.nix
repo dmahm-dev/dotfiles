@@ -8,11 +8,6 @@
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		elyprismlauncher = {
-            url = "github:ElyPrismLauncher/ElyPrismLauncher";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
 		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 		nvf.url = "github:notashelf/nvf";
 	};
