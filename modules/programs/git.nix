@@ -7,8 +7,8 @@
 			init.defaultBranch = "main";
 
 			user = {
-				name = "Lazres31";
-				email = "lazres31@yandex.ru";
+				name = "dmahm";
+				email = "dmahm@yandex.ru";
 			};
 
 			alias = {
