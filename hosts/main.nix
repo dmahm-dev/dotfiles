@@ -1,21 +1,18 @@
 { config, pkgs, lib, ... }:
 
 {
-	imports =
-		[ # Include the results of the hardware scan.
-			./hardware-configuration.nix
-		];
+	imports = [ ./hardware-configuration.nix ];
 
-	networking.hostName = "SomePC"; # Define your hostname.
-	hardware.enableAllFirmware = true; # Ignore license
-	nixpkgs.config.allowUnfree = true; # Fix for enableAllFirmware
+	networking.hostName = "SomePC";
+	hardware.enableAllFirmware = true;
+	nixpkgs.config = {
+		allowUnfree = true;
+		cudaSupport = true;
+	};
 
-	# Set your time zone.
 	time.timeZone = "Europe/Moscow";
 
-	# Select internationalisation properties.
 	i18n.defaultLocale = "ru_RU.UTF-8";
-
 	i18n.extraLocaleSettings = {
 		LC_ADDRESS = "ru_RU.UTF-8";
 		LC_IDENTIFICATION = "ru_RU.UTF-8";
@@ -28,27 +25,16 @@
 		LC_TIME = "ru_RU.UTF-8";
 	};
 
-	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.userok = {
 		isNormalUser = true;
 		description = "userok";
 		extraGroups = [ "networkmanager" "wheel" "network" "video" "input" "storage"];
 	};
 
-	# Enable automatic login for the user.
 	services.getty.autologinUser = "userok";
-  
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-	# List packages installed in system profile
-	environment.systemPackages = with pkgs; [
-		cachix
-		home-manager
-	];
-
-	boot.kernelPackages = pkgs.linuxPackages_6_18;
 
 	nix.settings = {
+		experimental-features = [ "nix-command" "flakes" ];
 		substituters = [
 			"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
 			"https://cache.nixos.org"
@@ -57,7 +43,12 @@
 			"cache.nixos.org-1:6NCHdD59x431o0GWypbMrAURkbJ16ZPMQFGspcDShjY="
 		];
 	};
+	environment.systemPackages = with pkgs; [
+		cachix
+		home-manager
+	];
 
+	boot.kernelPackages = pkgs.linuxPackages_6_18;
 	# This value determines the NixOS release from which the default
 	# settings for stateful data, like file locations and database versions
 	# on your system were taken. It‘s perfectly fine and recommended to leave
