@@ -15,6 +15,7 @@
 		settings = {
 			disable_ligatures = "cursor";
 			cursor_trail = 3;
+			cursor_trail_decay = "0.1 0.6";
 			scrollback_lines = 20000;
 			show_hyperlink_targets = "yes";
 			paste_actions = "quote-urls-at-prompt,confirm,confirm-if-large";
