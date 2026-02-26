@@ -4,6 +4,8 @@
 	boot.kernelParams = [
 		"pcie_aspm=force"
 		"i915.enable_guc=3"
+		"i915.force_probe=!9a68"
+		"xe.force_probe=9a68"
 	];
 	boot.initrd = {
 		kernelModules = ["i915" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
@@ -14,8 +16,11 @@
 	hardware.cpu.intel.updateMicrocode = true;
 
 	# for games
-	boot.kernel.sysctl."vm.max_map_count" = 2147483642;
-	boot.kernel.sysctl."dev.i915.perf_stream_paranoid" = 0;	
+	boot.kernel.sysctl = {
+		"vm.max_map_count" = 2147483642;
+		"dev.i915.perf_stream_paranoid" = 0;
+		"kernel.perf_event_paranoid" = 1;
+	};
 
 	# disable famous 20 years bug
 	boot.postBootCommands = 
