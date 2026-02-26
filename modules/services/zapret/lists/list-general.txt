@@ -50,3 +50,4 @@ developers.cloudflare.com
 rutracker.org
 static.rutracker.cc
 fastpic.org
+pages.dev
