@@ -1,12 +1,6 @@
 {pkgs, config, lib, ...}:
 
-let
-	vivaldiPath = "${config.home.homeDirectory}/.config/vivaldi/Default";
-in {
-	home.packages = with pkgs; [
-		vivaldi-ffmpeg-codecs
-	];
-
+{
  	programs.chromium.nativeMessagingHosts = [
  		pkgs.kdePackages.plasma-browser-integration
  	];
@@ -20,6 +14,6 @@ in {
 			{ id = "oboonakemofpalcgghocfoadofidjkkk"; }
 			{ id = "gebbhagfogifgggkldgodflihgfeippi"; }
 		];
-		package = pkgs.vivaldi;
+		package = pkgs.vivaldi.override { proprietaryCodecs = true; };
 	};
 }
