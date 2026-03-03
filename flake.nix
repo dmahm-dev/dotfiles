@@ -23,7 +23,7 @@
 		};
 	in {
 		nixosConfigurations."SomePC" = nixpkgs.lib.nixosSystem {
-			inherit system;
+			inherit system pkgs;
 			specialArgs = { inherit inputs; };
 			modules = [
 				./hosts/main.nix
