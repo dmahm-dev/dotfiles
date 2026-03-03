@@ -17,6 +17,8 @@
 			libwebp
 			kdePackages.kalgebra
 			protonup-qt
+			aegisub
+			audacity
 		];
 	};
 	programs.mpv.enable = true;
