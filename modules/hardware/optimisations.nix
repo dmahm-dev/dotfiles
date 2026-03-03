@@ -19,10 +19,9 @@
 	};
 
 	# disable famous 20 years bug
-	boot.postBootCommands = 
-		lib.strings.replaceStrings ["\t"] [""] ''
-		echo 200 > /sys/kernel/mm/lru_gen/min_ttl_ms
-	'';
+	systemd.tmpfiles.rules = [
+		"w /sys/kernel/mm/lru_gen/min_ttl_ms - - - - 200"
+	];
 
 	# INTEL
 	hardware.graphics = {
