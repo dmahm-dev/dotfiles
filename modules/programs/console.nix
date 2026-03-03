@@ -12,10 +12,9 @@
 	};
 
 	# vconsole	
-# 	console = {
-# 		packages = with pkgs; [ kbd terminus_font ];
-# 		font = "ter-c22b";
-# 		keyMap = "us";
-# 		#useXkbConfig = true; # setup as xkb
-# 	};
+	console = {
+		packages = with pkgs; [kbd terminus_font];
+		font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
+		useXkbConfig = true; # setup as xkb in wayland.nix
+	};
 }
