@@ -22,7 +22,7 @@
 		];
 	};
 	programs.mpv.enable = true;
-	
+	programs.home-manager.enable = true;
 
 	imports = [
 		./system/userDirs.nix
