@@ -17,7 +17,6 @@ in {
 		videos = "${docsPath}/Videos";
 	};
 
-	home.file.".config/user-dirs.locale".text = "en_US";
 	home.file.".local/share/fonts".source =
 		config.lib.file.mkOutOfStoreSymlink "/run/current-system/sw/share/X11/fonts";
 
