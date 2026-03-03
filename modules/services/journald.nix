@@ -1,8 +1,7 @@
-{lib, ...}:
+{...}:
 
 {
-	services.journald.extraConfig = 
-		lib.strings.replaceStrings ["\t"] [""] ''
+	services.journald.extraConfig = ''
 			[Journal]
 			SystemMaxUse=50M
 		'';

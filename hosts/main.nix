@@ -5,10 +5,6 @@
 
 	networking.hostName = "SomePC";
 	hardware.enableAllFirmware = true;
-	nixpkgs.config = {
-		allowUnfree = true;
-		cudaSupport = true;
-	};
 
 	time.timeZone = "Europe/Moscow";
 
@@ -22,7 +18,7 @@
 	users.users.userok = {
 		isNormalUser = true;
 		description = "userok";
-		extraGroups = [ "networkmanager" "wheel" "network" "video" "input" "storage"];
+		extraGroups = [ "networkmanager" "wheel"];
 	};
 
 	services.getty.autologinUser = "userok";
@@ -32,9 +28,6 @@
 		substituters = [
 			"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
 			"https://cache.nixos.org"
-		];
-		trusted-public-keys = [
-			"cache.nixos.org-1:6NCHdD59x431o0GWypbMrAURkbJ16ZPMQFGspcDShjY="
 		];
 	};
 	environment.systemPackages = with pkgs; [

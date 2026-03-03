@@ -17,9 +17,6 @@ in {
 		videos = "${docsPath}/Videos";
 	};
 
-	home.file.".local/share/fonts".source =
-		config.lib.file.mkOutOfStoreSymlink "/run/current-system/sw/share/X11/fonts";
-
 	# copy from ./templates to ~/Templates
 	home.activation.copyToTemplates =
 		lib.hm.dag.entryAfter [ "writeBoundary" ] ''

@@ -25,7 +25,6 @@
 		fallbackDns = [ "1.1.1.1" "1.0.0.1" ];
 		extraConfig = ''
 			MulticastDNS=no
-			DNS=1.1.1.1 1.0.0.1
 		'';
 	};
 
@@ -35,8 +34,8 @@
 	};
 
 	networking.firewall.enable = true;
-	networking.nftables = {
-		enable = true;
+ 	networking.nftables = {
+ 		enable = true;
 		#zapret thing
 		ruleset = ''
 			table inet zapret {
@@ -48,7 +47,7 @@
 				}
 			}
 		'';
-	};
+ 	};
 	services.firewalld = {
 		enable = true;
 		zones.home.services = [

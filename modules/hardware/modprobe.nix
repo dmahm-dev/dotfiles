@@ -1,11 +1,10 @@
-{lib, ...}:
+{...}:
 
 {
-	boot.extraModprobeConfig = 
-	lib.strings.replaceStrings ["\t"] [""] ''
+	boot.extraModprobeConfig = ''
 		# disable watchdog
 		blacklist iTCO_wdt
-		# disable webcam
+		# disable webcam.
 		blacklist uvcvideo
 	'';
 }

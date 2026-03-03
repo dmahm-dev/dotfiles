@@ -4,12 +4,8 @@
 	boot.kernelParams = [
 		"pcie_aspm=force"
 		"i915.enable_guc=3"
-		"i915.force_probe=!9a68"
-		"xe.force_probe=9a68"
 	];
-	boot.initrd = {
-		kernelModules = ["i915" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
-	};
+	boot.initrd.kernelModules = ["i915"];
 
 	boot.kernelModules = [ "ntsync" ];
 
@@ -49,14 +45,14 @@
 
 			nvidia-vaapi-driver
 		];
-		extraPackages32 = with pkgs; [
-			libva
-			libvdpau
-			intel-media-driver
-			vulkan-loader
-			vulkan-validation-layers
-			nvidia-vaapi-driver
-		];
+# 		extraPackages32 = with pkgs; [ # Error: its 64bit packages not 32bit
+# 			libva
+# 			libvdpau
+# 			intel-media-driver
+# 			vulkan-loader
+# 			vulkan-validation-layers
+# 			nvidia-vaapi-driver
+# 		];
 	};
 	
 	hardware.intel-gpu-tools.enable = true;
@@ -66,9 +62,8 @@
 		vdpauinfo
 		libva-utils
 		vulkan-tools
-		nvtopPackages.intel
+		nvtopPackages.full
 		#nvidia
-		nvtopPackages.nvidia
 		cudaPackages.cudatoolkit
 	];
 
