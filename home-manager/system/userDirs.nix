@@ -20,10 +20,11 @@ in {
 	# copy from ./templates to ~/Templates
 	home.activation.copyToTemplates =
 		lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+		mkdir -p ${templatesPath}
 		for file in ${./templates}/*; do
 			filename=$(basename "$file")
 			if [ ! -e "${templatesPath}/$filename" ]; then
-				cp ${./templates}/* ${templatesPath}
+				cp --no-preserve=mode ${./templates}/$filename ${templatesPath}
 			fi
 		done
 		'';
