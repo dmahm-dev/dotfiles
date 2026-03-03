@@ -72,9 +72,11 @@
 		nvidiaSettings = true;
 		open = false; # d3cold is not working
 		package = config.boot.kernelPackages.nvidiaPackages.stable;
-		prime.sync.enable = true;
 		prime.nvidiaBusId = "PCI:1@0:0:0";
 		prime.intelBusId = "PCI:0@0:2:0";
+		prime.offload.enable = true;
+		prime.offload.enableOffloadCmd = true;
+		prime.offload.offloadCmdMainProgram = "prime-run";
 		powerManagement.enable = true; # turn on systemd services
 	};
 
