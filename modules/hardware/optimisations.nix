@@ -4,8 +4,10 @@
 	boot.kernelParams = [
 		"pcie_aspm=force"
 		"i915.enable_guc=3"
+		"i915.force_probe=!9a68"
+		"xe.force_probe=9a68"
 	];
-	boot.initrd.kernelModules = ["i915"];
+	boot.initrd.kernelModules = ["xe"];
 
 	boot.kernelModules = [ "ntsync" ];
 
