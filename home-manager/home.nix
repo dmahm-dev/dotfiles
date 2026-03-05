@@ -19,6 +19,7 @@
 			protonup-qt
 			aegisub
 			audacity
+			heroic
 		];
 	};
 	programs.mpv.enable = true;
