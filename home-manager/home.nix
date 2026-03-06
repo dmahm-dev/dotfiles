@@ -1,4 +1,4 @@
-{pkgs, unstable, ...}:
+{pkgs, ...}:
 
 {
 	home = {
@@ -25,8 +25,6 @@
 	programs = {
 		mpv.enable = true;
 		home-manager.enable = true;
-		obsidian.enable = true;
-		obsidian.package = unstable.obsidian;
 	};
 
 	imports = [

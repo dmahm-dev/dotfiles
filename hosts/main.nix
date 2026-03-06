@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, unstable, ... }:
 
 {
 	imports = [ ./hardware-configuration.nix ];
@@ -33,6 +33,7 @@
 	environment.systemPackages = with pkgs; [
 		cachix
 		home-manager
+		unstable.obsidian
 	];
 
 	boot.kernelPackages = pkgs.linuxPackages_6_18;
