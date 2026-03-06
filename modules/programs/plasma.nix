@@ -28,4 +28,6 @@
 	environment.plasma6.excludePackages = [
 		pkgs.kdePackages.discover
 	];
+
+	programs.dconf.enable = true; #for GTK apps
 }

@@ -1,7 +1,7 @@
-{pkgs,...}:
+{unstable,...}:
 
 {
     environment.systemPackages = [
-        pkgs.fragments
+        unstable.fragments
     ];
 }

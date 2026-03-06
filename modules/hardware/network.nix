@@ -52,11 +52,11 @@
 		enable = true;
 		zones.home.services = [
 			"syncthing" "syncthing-gui" "syncthing-relay"
-			"kdeconnect" "mdns"
+			"kdeconnect" "mdns" "transmission-client"
 		];
 		zones.nixos-fw-default.services = [
 			"syncthing" "syncthing-gui" "syncthing-relay"
-			"kdeconnect" "mdns"
+			"kdeconnect" "mdns" "transmission-client"
 		];
 	};
 
