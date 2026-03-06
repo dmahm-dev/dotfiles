@@ -17,10 +17,13 @@
 		enable = true;
 		extraPortals = with pkgs; [
 			kdePackages.xdg-desktop-portal-kde
-			kdePackages.ocean-sound-theme
-			kdePackages.oxygen-sounds
 		];
 	};
+
+	environment.systemPackages = with pkgs; [
+		kdePackages.ocean-sound-theme
+		kdePackages.oxygen-sounds
+	];
 
 	environment.plasma6.excludePackages = [
 		pkgs.kdePackages.discover
