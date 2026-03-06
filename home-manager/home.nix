@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, unstable, ...}:
 
 {
 	home = {
@@ -22,8 +22,12 @@
 			heroic
 		];
 	};
-	programs.mpv.enable = true;
-	programs.home-manager.enable = true;
+	programs = {
+		mpv.enable = true;
+		home-manager.enable = true;
+		obsidian.enable = true;
+		obsidian.package = unstable.obsidian;
+	};
 
 	imports = [
 		./system/userDirs.nix

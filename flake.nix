@@ -3,6 +3,7 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 		home-manager = {
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -11,7 +12,8 @@
 		nvf.url = "github:notashelf/nvf";
 	};
 
-	outputs = { self, nixpkgs, home-manager, nix-flatpak, nvf, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, nixpkgs-unstable,
+				nix-flatpak, nvf, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = import nixpkgs {
@@ -21,10 +23,17 @@
 				cudaSupport = true;
 			};
 		};
+		unstable = import nixpkgs-unstable {
+			inherit system;
+			config = {
+				allowUnfree = true;
+				cudaSupport = true;
+			};
+		};
 	in {
 		nixosConfigurations."SomePC" = nixpkgs.lib.nixosSystem {
 			inherit system pkgs;
-			specialArgs = { inherit inputs; };
+			specialArgs = { inherit inputs unstable; };
 			modules = [
 				./hosts/main.nix
 				./modules/default.nix
@@ -37,7 +46,7 @@
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {
 			inherit pkgs;
-			extraSpecialArgs = { inherit inputs; };
+			extraSpecialArgs = { inherit inputs unstable; };
 			modules = [ ./home-manager/home.nix ];
 		};
 	};

@@ -12,7 +12,6 @@
 	services.flatpak = {
 		enable = true;
 		packages = [
-			"md.obsidian.Obsidian"
 			"ru.linux_gaming.PortProton"
 			"https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref"
 		];
@@ -21,6 +20,7 @@
 				filesystems = [
 					"/nix/store:ro"
 					"xdg-data/fonts:ro"
+					"/run/current-system/sw/share/X11/fonts:ro"
 				];
 			};
 		};
@@ -28,6 +28,5 @@
 
 	environment.shellAliases = {
 		portproton = "flatpak run ru.linux_gaming.PortProton";
-		obsidian = "flatpak run md.obsidian.Obsidian";
 	};
 }
