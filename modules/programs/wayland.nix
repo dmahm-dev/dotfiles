@@ -1,14 +1,11 @@
 {pkgs, ...}:
 
 {
-	services.xserver = {
-		xkb = {
-			layout = "us,ru";
-			variant = "";
-			options = "grp:alt_shift_toggle";
-		};
-
-		#extraConfig = "";
+	services.xserver.xkb = {
+		layout = "us,ru";
+		model = "pc105";
+		variant = "";
+		options = "grp:alt_shift_toggle";
 	};
 	
 	programs.xwayland.enable = true;
