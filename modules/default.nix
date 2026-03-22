@@ -13,7 +13,6 @@
 		./hardware/printing.nix
 		./hardware/periphery.nix
 		./hardware/sound.nix
-		./hardware/cpu.nix
 
 		./services/journald.nix
 		./services/sysctl.nix
