@@ -10,10 +10,7 @@
 
 	# also change home.nix
 	i18n.defaultLocale = "ru_RU.UTF-8";
-	i18n.extraLocaleSettings = {
-		LC_MESSAGES = "en_US.UTF-8";
-		LC_NUMERIC = "en_US.UTF-8";
-	};
+	i18n.extraLocaleSettings = { LC_NUMERIC = "en_US.UTF-8"; };
 
 	users.users.userok = {
 		isNormalUser = true;

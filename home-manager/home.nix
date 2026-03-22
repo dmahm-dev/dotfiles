@@ -7,7 +7,6 @@
 		stateVersion = "25.11";
 		language = {
 			base = "ru_RU.UTF-8";
-			messages = "en_US.UTF-8";
 			numeric = "en_US.UTF-8";
 		};
 		packages = with pkgs; [
