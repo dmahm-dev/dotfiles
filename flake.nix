@@ -8,12 +8,17 @@
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		plasma-manager = {
+			url = "github:nix-community/plasma-manager";
+			inputs.nixpkgs.follows = "nixpkgs";
+			inputs.home-manager.follows = "home-manager";
+		};
 		nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
-		nvf.url = "github:notashelf/nvf";
+# 		nvf.url = "github:notashelf/nvf";
 	};
 
 	outputs = { self, nixpkgs, home-manager, nixpkgs-unstable,
-				nix-flatpak, nvf, ... }@inputs:
+				nix-flatpak, plasma-manager, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = import nixpkgs {
@@ -41,13 +46,16 @@
 				./modules/programs/plasma.nix
 
 				nix-flatpak.nixosModules.nix-flatpak
-				nvf.nixosModules.default
+# 				nvf.nixosModules.default
 			];
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {
 			inherit pkgs;
 			extraSpecialArgs = { inherit inputs unstable; };
-			modules = [ ./home-manager/home.nix ];
+			modules = [
+				inputs.plasma-manager.homeModules.plasma-manager
+				./home-manager/home.nix
+			];
 		};
 	};
 }
