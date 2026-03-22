@@ -1,9 +1,8 @@
-Stage 1. TTY:
-disable login and startup messages
-configure plymouth
-
-Stage 2. DM Tweaks:
 make qt and gtk looks the same
 setup sddm theme
+setup wluma
+set exponential brightness control on keys
+switch from KDE wallet to keepassxc
+fix disable touchpad button
 
 install https://github.com/ilyhalight/voice-over-translation
