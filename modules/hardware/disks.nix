@@ -6,6 +6,8 @@
 		mountOnMedia = true;
 	};
 
+	services.smartd.enable = true;
+
 	services.fstrim.enable = true;
 	fileSystems."/".options = [ "noatime" ];
 
@@ -18,5 +20,6 @@
 		parted
 		gparted
 		kdePackages.filelight
+		kdePackages.plasma-disks
 	];
 }
