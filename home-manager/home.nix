@@ -29,6 +29,7 @@
 	imports = [
 		./system/userDirs.nix
 		./system/hushlogin.nix
+		./system/plasma.nix
 
 		./programs/console.nix
 		./programs/vivaldi.nix

@@ -13,16 +13,14 @@
 		};
 	};
 
-	xdg.portal = {
-		enable = true;
-		extraPortals = with pkgs; [
-			kdePackages.xdg-desktop-portal-kde
-		];
-	};
+	xdg.portal.enable = true;
 
 	environment.systemPackages = with pkgs; [
 		kdePackages.ocean-sound-theme
 		kdePackages.oxygen-sounds
+		hunspell
+		hunspellDicts.ru_RU
+		hunspellDicts.en_US
 	];
 
 	environment.plasma6.excludePackages = [
