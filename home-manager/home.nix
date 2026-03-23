@@ -31,6 +31,7 @@
 		./system/hushlogin.nix
 		./system/backlight.nix
 		./system/plasma.nix
+		./system/exponentialBrightness.nix
 
 		./programs/console.nix
 		./programs/vivaldi.nix
