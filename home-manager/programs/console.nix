@@ -59,7 +59,7 @@
 						keyIcon = "";
 						key = "| ";
 						keyWidth = 7;
-						format = "({3}Ядр/{4}Пот) @ {7} - {8}";
+						format = "({3}Ядр/{4}Пот) @ {7}";
 					}
 					{type = "gpu"; driverSpecific = true; temp = true; key = "ГПУ";}
 					{type = "memory"; key = "ОЗУ";}
