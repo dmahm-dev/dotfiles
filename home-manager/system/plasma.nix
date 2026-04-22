@@ -1,6 +1,15 @@
-{...}:
+{pkgs,...}:
 
 {
+    xdg.desktopEntries = {
+        pot-ocr = {
+            name = "Pot OCR Translate";
+            exec = "${pkgs.curl}/bin/curl \"http://127.0.0.1:60828/ocr_translate\"";
+            terminal = false;
+            noDisplay = true;
+        };
+    };
+
     programs.ghostwriter.spelling = {
         checkerEnabledByDefault = true;
         ignoreUppercase = true;
@@ -19,6 +28,7 @@
             "services/org.kde.plasma-systemmonitor.desktop"._launch = ["Ctrl+Alt+Del" "Meta+Esc"];
             kwin."Walk Through Windows" = "Alt+Tab";
             kwin.Overview = ["Meta+W" "Meta+Tab"];
+            "pot-ocr.desktop"._launch = "Meta+Shift+T";
         };
         kwin = {
             nightLight = {
@@ -41,6 +51,19 @@
                 };
             };
         };
+        window-rules = [
+            {
+                description = "Remove borders for Pot";
+                match.window-class = {
+                    value = "pot";
+                    type = "substring";
+                };
+                apply.noborder = {
+                    value = true;
+                    apply = "force";
+                };
+            }
+        ];
         input.mice = [{
             vendorId = "258a";
             productId = "0027";
