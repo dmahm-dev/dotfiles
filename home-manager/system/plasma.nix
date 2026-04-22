@@ -118,6 +118,10 @@
                 Xwayland.Scale = 1.2;
                 Effect-overview.BorderActivate = 9;
                 Effect-dimInactive.Strength = 10;
+                Effect-mousemark = {
+                    Freedrawcontrol = true;
+                    Freedrawshift = false;
+                };
                 Plugins.screenedgeEnabled = false;
                 Plugins.mousemarkEnabled = true;
             };
