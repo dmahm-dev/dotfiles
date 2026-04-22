@@ -26,6 +26,9 @@
 			config = {
 				allowUnfree = true;
 				cudaSupport = true;
+				cudaCapabilities = [ "7.5" ];
+				cudaForwardCompat = false;
+				checkMeta = true;
 			};
 		};
 		unstable = import nixpkgs-unstable {
@@ -33,6 +36,9 @@
 			config = {
 				allowUnfree = true;
 				cudaSupport = true;
+				cudaCapabilities = [ "7.5" ];
+				cudaForwardCompat = false;
+				checkMeta = true;
 			};
 		};
 	in {
