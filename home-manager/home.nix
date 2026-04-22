@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{config, pkgs, ...}:
 
 {
 	home = {
@@ -20,6 +20,8 @@
 			audacity
 			heroic
 		];
+		# fix flatpak fonts
+		file.".local/share/fonts".source = config.lib.file.mkOutOfStoreSymlink "/run/current-system/sw/share/X11/fonts";
 	};
 	programs = {
 		mpv.enable = true;
