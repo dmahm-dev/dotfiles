@@ -19,6 +19,9 @@
 			aegisub
 			audacity
 			heroic
+			scantailor-advanced
+			ocrmypdf
+			img2pdf
 		];
 		# fix flatpak fonts
 		file.".local/share/fonts".source = config.lib.file.mkOutOfStoreSymlink "/run/current-system/sw/share/X11/fonts";
