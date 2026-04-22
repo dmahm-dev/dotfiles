@@ -51,3 +51,5 @@ rutracker.org
 static.rutracker.cc
 fastpic.org
 pages.dev
+nexus-cdn.com
+nexusmods.com
