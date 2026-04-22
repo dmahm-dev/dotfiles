@@ -71,10 +71,10 @@
             accelerationProfile = "none";
         }];
         input.keyboard = {
-            model = "pc105";
+            model = "pc104";
             numlockOnStartup = "on";
-            options = ["grp:alt_shift_toggle"];
-            layouts = [{layout = "ru";} {layout = "us";}];
+            options = ["grp:alt_shift_toggle" "compose:ralt"];
+            layouts = [{layout = "us";} {layout = "ru";}];
         };
         panels = [{
             height = 42;

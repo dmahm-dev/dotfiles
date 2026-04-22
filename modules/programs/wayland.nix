@@ -3,11 +3,11 @@
 {
 	services.xserver.xkb = {
 		layout = "us,ru";
-		model = "pc105";
+		model = "pc104";
 		variant = "";
-		options = "grp:alt_shift_toggle";
+		options = "grp:alt_shift_toggle,compose:ralt";
 	};
-	
+
 	programs.xwayland.enable = true;
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
