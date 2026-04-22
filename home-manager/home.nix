@@ -31,7 +31,7 @@
 	imports = [
 		./system/userDirs.nix
 		./system/hushlogin.nix
-		./system/backlight.nix
+		./system/dim-screen-night.nix
 		./system/plasma.nix
 		./system/exponentialBrightness.nix
 

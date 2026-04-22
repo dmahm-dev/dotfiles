@@ -4,7 +4,7 @@ let
   expBrightness = pkgs.writeShellScriptBin "exp-brightness" ''
     #!/usr/bin/env bash
     ACTION=$1
-    MULTIPLIER=2.0
+    MULTIPLIER=1.8
 
     SERVICE="org.kde.Solid.PowerManagement"
     OBJ_PATH="/org/kde/Solid/PowerManagement/Actions/BrightnessControl"
