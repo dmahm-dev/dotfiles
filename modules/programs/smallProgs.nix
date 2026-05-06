@@ -9,4 +9,5 @@
     programs.nix-ld.enable = true;
     programs.throne.enable = true;
     programs.throne.tunMode.enable = true;
+    programs.throne.tunMode.setuid = true;
 }
