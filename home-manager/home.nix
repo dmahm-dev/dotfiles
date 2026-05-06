@@ -29,6 +29,17 @@
 	programs = {
 		mpv.enable = true;
 		home-manager.enable = true;
+		yt-dlp = {
+			enable = true;
+			settings = {
+				embed-thumbnail = true;
+				embed-subs = true;
+				write-subs = true;
+				sub-langs = "ru,en.*";
+				embed-chapters = true;
+				add-metadata = true;
+			};
+		};
 	};
 
 	imports = [
