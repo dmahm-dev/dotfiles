@@ -9,9 +9,11 @@
         scrcpy
     ];
     programs.nix-ld.enable = true;
-    programs.throne.enable = true;
-    programs.throne.tunMode.enable = true;
-    programs.throne.tunMode.setuid = true;
-   programs.adb.enable = true;
+    programs.throne = {
+        enable = true;
+        tunMode.enable = true;
+        tunMode.setuid = true;
+    };
     programs.adb.enable = true;
+
 }
