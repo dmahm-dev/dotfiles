@@ -5,6 +5,8 @@
         unrar
         pciutils
         gdb
+        p7zip
+        scrcpy
     ];
     programs.nix-ld.enable = true;
     programs.throne.enable = true;
