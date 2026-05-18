@@ -48,6 +48,7 @@
 		./system/dim-screen-night.nix
 		./system/plasma.nix
 		./system/exponentialBrightness.nix
+		./system/criticalNotifications.nix
 
 		./programs/console.nix
 		./programs/vivaldi.nix
