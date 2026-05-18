@@ -1,4 +1,4 @@
-{pkgs,...}:
+{pkgs, lib, ...}:
 
 {
 	programs.captive-browser = {
@@ -14,7 +14,8 @@
 
 	networking.networkmanager = {
 		enable = true;
-		dns = "systemd-resolved";
+		#dns = "systemd-resolved";
+		dns = lib.mkForce "none";
 		wifi.macAddress = "stable-ssid";
 		plugins = [ pkgs.networkmanager-openvpn ];
 	};
@@ -22,16 +23,22 @@
 		enable = true;
 		dnssec = "allow-downgrade";
 		dnsovertls = "opportunistic";
+		#dnssec = "true";
+		#dnsovertls = "true";
 		fallbackDns = [ "1.1.1.1" "1.0.0.1" ];
 		extraConfig = ''
 			MulticastDNS=no
 		'';
 	};
+	networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
 	boot.kernel.sysctl = {
 		"net.ipv4.tcp_fastopen" = 3;
 		"net.ipv4.tcp_slow_start_after_idle" = 0;
 	};
+
+
+
 
 	networking.firewall.enable = true;
  	networking.nftables = {
