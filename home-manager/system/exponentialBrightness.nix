@@ -13,7 +13,7 @@ let
     MAX=$(qdbus $SERVICE $OBJ_PATH brightnessMax)
 
     # Вычисляем 1% от максимальной яркости как нижний порог
-    MIN_ALLOWED=$(( MAX / 100 ))
+    MIN_ALLOWED=2
     if [ "$MIN_ALLOWED" -lt 1 ]; then MIN_ALLOWED=1; fi
 
     if [ "$ACTION" = "up" ]; then
