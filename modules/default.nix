@@ -40,5 +40,6 @@
 		./programs/discord.nix
 		./programs/python.nix
 		./programs/smallProgs.nix
+		./programs/gamesScreenRecorder.nix
 	];
 }

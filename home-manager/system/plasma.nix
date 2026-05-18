@@ -29,6 +29,11 @@
             kwin."Walk Through Windows" = "Alt+Tab";
             kwin.Overview = ["Meta+W" "Meta+Tab"];
             "pot-ocr.desktop"._launch = "Meta+Shift+T";
+            "com.dec05eba.gpu_screen_recorder" = {
+                gpu_screen_recorder_pause_unpause_recording = "";
+                gpu_screen_recorder_save_replay = "Alt+2";
+                gpu_screen_recorder_start_stop_recording = "Alt+1";
+            };
         };
         kwin = {
             nightLight = {
