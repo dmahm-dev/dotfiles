@@ -21,14 +21,12 @@
 	};
 	services.resolved = {
 		enable = true;
-		dnssec = "allow-downgrade";
-		dnsovertls = "opportunistic";
-		#dnssec = "true";
-		#dnsovertls = "true";
-		fallbackDns = [ "1.1.1.1" "1.0.0.1" ];
-		extraConfig = ''
-			MulticastDNS=no
-		'';
+		settings.Resolve = {
+			DNSOverTLS = "opportunistic";
+			DNSSEC = "allow-downgrade";
+			FallbackDNS = [ "1.1.1.1" "1.0.0.1" ];
+			MulticastDNS = "false";
+		};
 	};
 	networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 

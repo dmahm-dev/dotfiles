@@ -42,7 +42,7 @@
                 temperature.day = 6500;
                 temperature.night = 4500;
                 time.morning = "07:30";
-                time.evening = "21:00";
+                time.evening = "22:00";
                 transitionTime = 1;
             };
             effects = {

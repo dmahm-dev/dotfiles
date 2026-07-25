@@ -16,5 +16,6 @@
  				#OBS_VKCAPTURE = true;
  			};
  		};
+ 		extraCompatPackages = [ pkgs.proton-ge-bin ];
 	};
 }

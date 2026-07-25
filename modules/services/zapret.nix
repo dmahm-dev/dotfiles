@@ -27,7 +27,7 @@ in
             # TCP Discord
             "--filter-tcp=2053,2083,2087,2096,8443" "--hostlist-domains=discord.media" "--dpi-desync=fake,hostfakesplit" "--dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com" "--dpi-desync-hostfakesplit-mod=host=www.google.com,altorder=1" "--dpi-desync-fooling=ts" "--new"
             # TCP 443 Google
-            "--filter-tcp=443" "--hostlist=${listGoogle}" "--ip-id=zero" "--dpi-desync=fake,hostfakesplit" "--dpi-desync-fake-tls-mod=rnd,dupsid,sni=www.google.com" "--dpi-desync-hostfakesplit-mod=host=www.google.com,altorder=1" "--dpi-desync-fooling=ts" "--new"
+            "--filter-tcp=443" "--hostlist=${listGoogle}" "--ip-id=zero" "--dpi-desync=hostfakesplit" "-dpi-desync-repeats=4" "--dpi-desync-fooling=ts" "--dpi-desync-hostfakesplit-mod=host=www.google.com" "--new"
             # TCP 80, 443 General
             "--filter-tcp=80,443" "--hostlist=${listGeneral}" "--hostlist-exclude=${listExclude}" "--ipset-exclude=${ipsetExclude}" "--dpi-desync=fake,hostfakesplit" "--dpi-desync-fake-tls-mod=rnd,dupsid,sni=ya.ru" "--dpi-desync-hostfakesplit-mod=host=ya.ru,altorder=1" "--dpi-desync-fooling=ts" "--new"
             # UDP 443 General IP

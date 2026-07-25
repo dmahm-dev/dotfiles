@@ -2,9 +2,9 @@
 
 {
     systemd.user.timers."dim-screen-night" = {
-        Unit.Description = "timer to dim screen smoothly at 22:30";
+        Unit.Description = "timer to dim screen smoothly at 22:00";
         Timer = {
-            OnCalendar = "*-*-* 22:30:00";
+            OnCalendar = "*-*-* 22:00:00";
             Persistent = true;
         };
         Install.WantedBy = [ "timers.target" ];

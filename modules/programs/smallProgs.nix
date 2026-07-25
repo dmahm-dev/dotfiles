@@ -7,6 +7,8 @@
         gdb
         p7zip
         scrcpy
+        android-tools
+        docker
     ];
     programs.nix-ld.enable = true;
     programs.throne = {
@@ -14,6 +16,5 @@
         tunMode.enable = true;
         tunMode.setuid = true;
     };
-    programs.adb.enable = true;
 
 }

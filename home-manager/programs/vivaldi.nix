@@ -14,6 +14,6 @@
 			{ id = "oboonakemofpalcgghocfoadofidjkkk"; }
 			{ id = "gebbhagfogifgggkldgodflihgfeippi"; }
 		];
-		package = pkgs.vivaldi.override { proprietaryCodecs = true; };
+		package = pkgs.vivaldi.override { proprietaryCodecs = false; };
 	};
 }

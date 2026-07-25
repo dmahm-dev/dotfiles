@@ -4,7 +4,7 @@
 	home = {
 		username = "userok";
 		homeDirectory = "/home/userok";
-		stateVersion = "25.11";
+		stateVersion = "26.05";
 		language = {
 			base = "ru_RU.UTF-8";
 			numeric = "en_US.UTF-8";
