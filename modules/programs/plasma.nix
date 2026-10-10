@@ -18,6 +18,7 @@
 	environment.systemPackages = with pkgs; [
 		kdePackages.ocean-sound-theme
 		kdePackages.oxygen-sounds
+		kdePackages.skanlite
 		hunspell
 		hunspellDicts.ru_RU
 		hunspellDicts.en_US

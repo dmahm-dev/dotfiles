@@ -28,7 +28,6 @@
 			}
 			{appId = "ru.linux_gaming.PortProton";origin="flathub";}
 			{appId = "md.obsidian.Obsidian";origin="flathub";}
-			{appId = "com.pot_app.pot";origin="flathub";}
 		];
 		overrides = {
 			global.Context = {

@@ -1,4 +1,4 @@
-{config, ...}:
+{config, pkgs, ...}:
 
 {
 	services.printing = {
@@ -7,5 +7,10 @@
 		cups-pdf.instances.pdf.settings = {
 			Out = "\${HOME}/Documents/printer-pdf/";
 		};
+		drivers = [pkgs.pantum-driver];
+	};
+	hardware.sane = {
+		enable = true;
+		extraBackends = [ pkgs.pantum-driver ];
 	};
 }

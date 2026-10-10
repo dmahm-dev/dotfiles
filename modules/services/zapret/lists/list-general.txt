@@ -53,3 +53,6 @@ fastpic.org
 pages.dev
 nexus-cdn.com
 nexusmods.com
+itch.io
+itch.zone
+img.itch.zone

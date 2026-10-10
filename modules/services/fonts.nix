@@ -16,9 +16,9 @@
 		fontDir.enable = true;
 		fontconfig.defaultFonts = {
 			monospace = [ "FiraCode Nerd Font Mono" "LXGW WenKai"];
-			sansSerif = [ "Roboto" "LXGW WenKai" ];
-			serif = ["Roboto Slab" "LXGW WenKai"];
-			emoji = ["Noto Color Emoji"];
+#			sansSerif = [ "Roboto" "LXGW WenKai" ];
+#			serif = ["Roboto Slab" "LXGW WenKai"];
+#			emoji = ["Noto Color Emoji"];
 		};
 	};
 }

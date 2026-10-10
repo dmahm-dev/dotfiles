@@ -14,11 +14,15 @@
 			inputs.home-manager.follows = "home-manager";
 		};
 		nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
-# 		nvf.url = "github:notashelf/nvf";
+ 		nvf.url = "github:notashelf/nvf";
+ 		strudel-nvim = {
+			url = "github:gruvw/strudel.nvim";
+			flake = false;
+ 		};
 	};
 
 	outputs = { self, nixpkgs, home-manager, nixpkgs-unstable,
-				nix-flatpak, plasma-manager, ... }@inputs:
+				nix-flatpak, plasma-manager, nvf, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = import nixpkgs {
@@ -52,7 +56,6 @@
 				./modules/programs/plasma.nix
 
 				nix-flatpak.nixosModules.nix-flatpak
-# 				nvf.nixosModules.default
 			];
 		};
 		homeConfigurations."userok" = home-manager.lib.homeManagerConfiguration {
@@ -61,6 +64,8 @@
 			modules = [
 				inputs.plasma-manager.homeModules.plasma-manager
 				./home-manager/home.nix
+
+				nvf.homeManagerModules.default
 			];
 		};
 	};

@@ -9,6 +9,19 @@
         scrcpy
         android-tools
         docker
+
+        # C C++
+        clang
+        clang-tools
+        gnumake
+        cmake
+
+        # Python
+        python3
+        pyright
+
+        # Strudel
+        nodejs
     ];
     programs.nix-ld.enable = true;
     programs.throne = {

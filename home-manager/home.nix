@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{config, pkgs, unstable, ...}:
 
 {
 	home = {
@@ -10,7 +10,7 @@
 			numeric = "en_US.UTF-8";
 		};
 		packages = with pkgs; [
-			libreoffice-fresh
+			unstable.libreoffice
 			gamemode
 			telegram-desktop
 			libwebp
@@ -20,8 +20,7 @@
 			audacity
 			heroic
 			scantailor-advanced
-			ocrmypdf
-			img2pdf
+			anki
 		];
 		# fix flatpak fonts
 		file.".local/share/fonts".source = config.lib.file.mkOutOfStoreSymlink "/run/current-system/sw/share/X11/fonts";
@@ -55,5 +54,6 @@
 		./programs/mangohud.nix
 		./programs/vscode.nix
 		./programs/keepassxc.nix
+		./programs/neovim.nix
 	];
 }
