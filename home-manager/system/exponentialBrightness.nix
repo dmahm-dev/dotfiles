@@ -6,14 +6,15 @@ let
     ACTION=$1
     MULTIPLIER=1.8
 
+    QDBUS="${pkgs.kdePackages.qttools}/bin/qdbus"
     SERVICE="org.kde.Solid.PowerManagement"
     OBJ_PATH="/org/kde/Solid/PowerManagement/Actions/BrightnessControl"
 
-    CURRENT=$(qdbus $SERVICE $OBJ_PATH brightness)
-    MAX=$(qdbus $SERVICE $OBJ_PATH brightnessMax)
+    CURRENT=$($QDBUS $SERVICE $OBJ_PATH brightness)
+    MAX=$($QDBUS $SERVICE $OBJ_PATH brightnessMax)
 
     # Вычисляем 1% от максимальной яркости как нижний порог
-    MIN_ALLOWED=2
+    MIN_ALLOWED=$(( MAX / 100 ))
     if [ "$MIN_ALLOWED" -lt 1 ]; then MIN_ALLOWED=1; fi
 
     if [ "$ACTION" = "up" ]; then
@@ -22,13 +23,12 @@ let
     elif [ "$ACTION" = "down" ]; then
         NEW=$(${pkgs.gawk}/bin/awk "BEGIN { print int($CURRENT / $MULTIPLIER) }")
 
-        # Теперь яркость не упадет ниже 1% от максимума вашего экрана
         if [ "$NEW" -lt "$MIN_ALLOWED" ]; then
             NEW="$MIN_ALLOWED"
         fi
     fi
 
-    qdbus $SERVICE $OBJ_PATH setBrightness "$NEW"
+    $QDBUS $SERVICE $OBJ_PATH setBrightness "$NEW"
   '';
 
 in {

@@ -3,10 +3,7 @@
 {
     systemd.user.timers."dim-screen-night" = {
         Unit.Description = "timer to dim screen smoothly at 22:00";
-        Timer = {
-            OnCalendar = "*-*-* 22:00:00";
-            Persistent = true;
-        };
+        Timer.OnCalendar = "*-*-* 22:00:00";
         Install.WantedBy = [ "timers.target" ];
     };
 
@@ -17,8 +14,13 @@
             ExecStart = "${pkgs.writeShellScript "dim-screen" ''
                 target=1
                 current=$(${pkgs.brightnessctl}/bin/brightnessctl -m | cut -d, -f4 | tr -d '%')
+                prev=$current
 
                 while [ "$current" -gt "$target" ]; do
+                    if [ "$current" -gt "$prev" ]; then
+                        break
+                    fi
+                    prev=$current
                     ${pkgs.brightnessctl}/bin/brightnessctl set 1%-
                     sleep 0.5
                     current=$(${pkgs.brightnessctl}/bin/brightnessctl -m | cut -d, -f4 | tr -d '%')

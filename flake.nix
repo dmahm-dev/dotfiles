@@ -14,7 +14,10 @@
 			inputs.home-manager.follows = "home-manager";
 		};
 		nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
- 		nvf.url = "github:notashelf/nvf";
+ 		nvf = {
+			url = "github:notashelf/nvf";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
  		strudel-nvim = {
 			url = "github:gruvw/strudel.nvim";
 			flake = false;
@@ -25,36 +28,24 @@
 				nix-flatpak, plasma-manager, nvf, ... }@inputs:
 	let
 		system = "x86_64-linux";
+		nixpkgsConfig = {
+			allowUnfree = true;
+		};
 		pkgs = import nixpkgs {
 			inherit system;
-			config = {
-				allowUnfree = true;
-				cudaSupport = true;
-				cudaCapabilities = [ "7.5" ];
-				cudaForwardCompat = false;
-				checkMeta = true;
-			};
+			config = nixpkgsConfig;
 		};
 		unstable = import nixpkgs-unstable {
 			inherit system;
-			config = {
-				allowUnfree = true;
-				cudaSupport = true;
-				cudaCapabilities = [ "7.5" ];
-				cudaForwardCompat = false;
-				checkMeta = true;
-			};
+			config = nixpkgsConfig;
 		};
 	in {
 		nixosConfigurations."SomePC" = nixpkgs.lib.nixosSystem {
-			inherit system pkgs;
 			specialArgs = { inherit inputs unstable; };
 			modules = [
+				{ nixpkgs.config = nixpkgsConfig; }
 				./hosts/main.nix
 				./modules/default.nix
-
-				./modules/programs/plasma.nix
-
 				nix-flatpak.nixosModules.nix-flatpak
 			];
 		};

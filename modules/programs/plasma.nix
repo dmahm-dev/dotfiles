@@ -29,4 +29,10 @@
 	];
 
 	programs.dconf.enable = true; #for GTK apps
+
+	systemd.user.services."drkonqi-coredump-launcher@" = {
+		unitConfig = {
+			ConditionEnvironment = "|WAYLAND_DISPLAY |DISPLAY";
+		};
+	};
 }

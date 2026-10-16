@@ -14,8 +14,6 @@
 
 	networking.networkmanager = {
 		enable = true;
-		#dns = "systemd-resolved";
-		dns = lib.mkForce "none";
 		wifi.macAddress = "stable-ssid";
 		plugins = [ pkgs.networkmanager-openvpn ];
 	};

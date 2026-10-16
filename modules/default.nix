@@ -18,7 +18,6 @@
 		./services/sysctl.nix
 		./services/upower.nix
 		./services/bootloader.nix
-		./services/nix.nix
 		./services/systemd.nix
 		./services/fonts.nix
 		./services/flatpak.nix
@@ -40,6 +39,5 @@
 		./programs/discord.nix
 		./programs/python.nix
 		./programs/smallProgs.nix
-		./programs/gamesScreenRecorder.nix
 	];
 }

@@ -10,7 +10,7 @@
 		};
 
 		shellAliases = {
-			rebuild = "sudo nixos-rebuild switch -v && home-manager switch && flatpak update";
+			rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#SomePC -v && home-manager switch --flake /etc/nixos#userok && flatpak update -y";
 		};
 	};
 

@@ -15,22 +15,23 @@
 	users.users.userok = {
 		isNormalUser = true;
 		description = "userok";
-		extraGroups = [ "networkmanager" "wheel" "adbusers" "scanner" "lp" ];
+		extraGroups = [ "networkmanager" "wheel" "adbusers" "scanner" "lp" "docker"];
 	};
 
 	services.getty.autologinUser = "userok";
 
-	nix.settings = {
-		experimental-features = [ "nix-command" "flakes" ];
-		substituters = [
-			"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-			"https://cache.nixos.org"
-		];
+	nix = {
+		settings = {
+			experimental-features = [ "nix-command" "flakes" ];
+			substituters = [
+				"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+				"https://cache.nixos.org"
+			];
+		};
 	};
 	environment.systemPackages = with pkgs; [
 		cachix
 		home-manager
-		unstable.obsidian
 	];
 
 	#boot.kernelPackages = pkgs.linuxPackages_6_18;

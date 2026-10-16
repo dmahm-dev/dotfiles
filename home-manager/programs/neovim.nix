@@ -29,6 +29,7 @@
                     src = inputs.strudel-nvim;
                 };
  			};
+ 			extraPackages = [ pkgs.nodejs ];
 
  			languages = {
  				enableTreesitter = true;

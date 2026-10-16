@@ -6,11 +6,10 @@
     systemd.user.services.check-system-time = {
         Unit = {
             Description = "is system time valid";
-            PartOf = ["plasma-workspace.target"];
-            After = ["plasma-workspace.target"];
+            After = ["plasma-plasmashell.service"];
         };
         Install = {
-            WantedBy = ["plasma-workspace.target"];
+            WantedBy = ["graphical-session.target"];
         };
         Service = {
             Type = "oneshot";

@@ -35,25 +35,10 @@
 			intel-compute-runtime
 			libvdpau-va-gl
 			#intel-ocl #проблемы со скачиванием
-
-			vulkan-loader
 			vulkan-validation-layers
-
 			ocl-icd
-			libva
-			libvdpau
-			pciutils
-
 			nvidia-vaapi-driver
 		];
-# 		extraPackages32 = with pkgs; [ # Error: its 64bit packages not 32bit
-# 			libva
-# 			libvdpau
-# 			intel-media-driver
-# 			vulkan-loader
-# 			vulkan-validation-layers
-# 			nvidia-vaapi-driver
-# 		];
 	};
 	
 	hardware.intel-gpu-tools.enable = true;
@@ -64,8 +49,6 @@
 		libva-utils
 		vulkan-tools
 		nvtopPackages.full
-		#nvidia
-		cudaPackages.cudatoolkit
 	];
 
 	# NVIDIA
@@ -84,12 +67,8 @@
 	};
 
 	boot.extraModprobeConfig = ''
-		# Enable nvidia for wayland
-		options nvidia_drm modeset=1 fbdev=1
 		# Improve nvidia performance
 		options nvidia NVreg_UsePageAttributeTable=1
-		# Save all video memory to swap on hibernate
-		options nvidia NVreg_PreserveVideoMemoryAllocations=1
 		# Disable NVIDIA GSP due to unworking D3 state
 		options nvidia NVreg_EnableGpuFirmware=0
 	'';

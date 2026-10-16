@@ -8,17 +8,12 @@
         p7zip
         scrcpy
         android-tools
-        docker
 
         # C C++
         clang
         clang-tools
         gnumake
         cmake
-
-        # Python
-        python3
-        pyright
 
         # Strudel
         nodejs
@@ -29,5 +24,7 @@
         tunMode.enable = true;
         tunMode.setuid = true;
     };
+
+    virtualisation.docker.enable = true;
 
 }

@@ -3,8 +3,9 @@
 {
 	programs = {
 		bash.enable = true;
-		bash.bashrcExtra =
-			"shopt -s cdspell histappend histreedit checkjobs\nfastfetch";
+		bash.bashrcExtra = ''
+			[[ "$TERM" == "xterm-kitty" ]] && fastfetch
+		'';
 		kitty = {
 			enable = true;
 			enableGitIntegration = true;
