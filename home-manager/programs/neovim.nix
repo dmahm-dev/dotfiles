@@ -22,12 +22,23 @@
  				style = "dark";
  			};
 
+ 			keymaps = [
+				{
+					key = "jj";
+					mode = "i";
+					action = "<Esc>";
+					silent = true;
+					desc = "Exit insert mode with jj";
+				}
+ 			];
+
  			extraPlugins = {
                 strudel-nvim.package = pkgs.vimUtils.buildVimPlugin {
                     pname = "strudel-nvim";
                     version = "latest";
                     src = inputs.strudel-nvim;
                 };
+                vim-be-good.package = pkgs.vimPlugins.vim-be-good;
  			};
  			extraPackages = [ pkgs.nodejs ];
 

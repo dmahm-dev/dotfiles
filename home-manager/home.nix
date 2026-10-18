@@ -11,7 +11,6 @@
 		};
 		packages = with pkgs; [
 			unstable.libreoffice
-			gamemode
 			telegram-desktop
 			libwebp
 			kdePackages.kalgebra

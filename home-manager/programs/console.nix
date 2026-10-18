@@ -4,7 +4,16 @@
 	programs = {
 		bash.enable = true;
 		bash.bashrcExtra = ''
-			[[ "$TERM" == "xterm-kitty" ]] && fastfetch
+			if [[ $- == *i* ]]; then
+				case "$(tty)" in
+					/dev/pts/*)
+						[[ -n "$WAYLAND_DISPLAY" && -S "$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" ]] && fastfetch
+						;;
+					/dev/tty[2-9]*)
+						QT_QPA_PLATFORM=offscreen fastfetch
+						;;
+				esac
+			fi
 		'';
 		kitty = {
 			enable = true;

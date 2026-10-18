@@ -15,7 +15,7 @@
 	users.users.userok = {
 		isNormalUser = true;
 		description = "userok";
-		extraGroups = [ "networkmanager" "wheel" "adbusers" "scanner" "lp" "docker"];
+		extraGroups = [ "networkmanager" "wheel" "adbusers" "scanner" "lp" "docker" "gamemode"];
 	};
 
 	services.getty.autologinUser = "userok";
